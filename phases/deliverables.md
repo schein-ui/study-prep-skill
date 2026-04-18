@@ -149,21 +149,26 @@ Common gotcha: **Chrome headless doesn't wait for JS fetches.** If the HTML uses
 ├── (markdown sources)
 ├── visuals/
 │   └── *.svg
-└── student_downloads/           ← hand THIS folder to the student
-    ├── README_for_<student>.txt ← "double-click 00_START_HERE.html"
-    ├── 00_START_HERE.html       ← standalone study guide with SVGs inlined
-    ├── <Student>_Study_Guide.pdf
-    ├── <Student>_Cheat_Sheet.pdf
-    ├── <Student>_Quiz_Bank.pdf
-    ├── <Student>_Study_Plan.pdf
-    ├── <Student>_Glossary.pdf
-    ├── <Student>_Glossary.docx
-    ├── <Student>_Quiz_Bank.docx
-    ├── <Student>_Study_Plan.docx
-    ├── <Student>_Flashcards.txt
-    └── diagrams_pdf/
-        └── *.pdf
+├── student_downloads/           ← hand THIS folder to the student. Study material ONLY.
+│   ├── README_for_<student>.txt ← lead with the live URL; explain the Quizlet import
+│   ├── 00_START_HERE.html       ← standalone study guide with SVGs inlined
+│   ├── <Student>_Study_Guide.pdf
+│   ├── <Student>_Cheat_Sheet.pdf
+│   ├── <Student>_Quiz_Bank.pdf
+│   ├── <Student>_Study_Plan.pdf
+│   ├── <Student>_Glossary.pdf
+│   ├── <Student>_Glossary.docx
+│   ├── <Student>_Quiz_Bank.docx
+│   ├── <Student>_Study_Plan.docx
+│   ├── <Student>_Flashcards.txt
+│   └── diagrams_pdf/
+│       └── *.pdf
+└── for_parent/                  ← parent/tutor review only. DO NOT mix into student_downloads.
+    ├── QC_Report.pdf
+    └── Grading_Scorecard.pdf
 ```
+
+**Never zip the run root.** Zip `student_downloads/` only for email/iCloud distribution. The student sees study material, not the grading of the study material.
 
 ## Checklist before QC
 

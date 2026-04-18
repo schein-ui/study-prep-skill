@@ -261,7 +261,7 @@ If either is mounted, copy there as a third backup. The parent uploads the `.doc
 
 ## Output directory convention
 
-Mirror agentloop's conventions:
+Mirror agentloop's conventions. **Critical:** process artifacts (QC report, grading scorecard) belong in a `for_parent/` folder, NEVER inside `student_downloads/`. The student should open their folder and see only study material — not the grading of that material.
 
 ```
 {working_dir}/study-prep-output/{run-id}/
@@ -273,7 +273,8 @@ Mirror agentloop's conventions:
 ├── flashcards.txt
 ├── visuals/
 │   └── *.svg                        ← 5-10 subject-specific diagrams
-├── student_downloads/               ← the "hand this to the student" folder
+│
+├── student_downloads/               ← the "hand this to the student" folder. STUDY MATERIAL ONLY.
 │   ├── README_for_<student>.txt
 │   ├── 00_START_HERE.html           ← standalone (SVGs inlined)
 │   ├── <Student>_Study_Guide.pdf
@@ -287,11 +288,18 @@ Mirror agentloop's conventions:
 │   ├── <Student>_Flashcards.txt     ← Quizlet import
 │   └── diagrams_pdf/
 │       └── *.pdf                     ← each visual as its own PDF
-├── qc_report.md
+│
+├── for_parent/                      ← process artifacts — parent/tutor review only
+│   ├── QC_Report.pdf                 ← what was verified, what wasn't, any gaps
+│   └── Grading_Scorecard.pdf         ← honest multi-pass grading with retrospective
+│
+├── qc_report.md                     ← markdown sources for parent artifacts
 └── grading_scorecard.md
 ```
 
 `{run-id}` format: `YYYY-MM-DD_<subject-slug>` (e.g., `2026-04-18_evolution`).
+
+**Also critical:** when zipping + distributing, zip only `student_downloads/`, never the whole run directory. The parent folder stays local (or goes to a separate iCloud spot if the parent wants access on their phone).
 
 ## Templates
 
