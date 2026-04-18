@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TODO: &lt;Student&gt; — &lt;Subject&gt; Cheat Sheet</title>
+<style>
+  @page { size: letter; margin: 0.35in; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; font-size: 8.5pt; line-height: 1.25; color: #1e293b; margin: 0; }
+  .page { page-break-after: always; padding: 0.15in; }
+  .page:last-of-type { page-break-after: auto; }
+  h1 { font-size: 14pt; margin: 0 0 4pt 0; color: #0f172a; border-bottom: 2px solid #0f172a; padding-bottom: 2pt; }
+  h2 { font-size: 9.5pt; margin: 0 0 3pt 0; padding: 2pt 5pt; color: #fff; border-radius: 3pt; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6pt; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6pt; }
+  .box { border: 1px solid #cbd5e1; border-radius: 4pt; padding: 4pt 6pt; background: #f8fafc; }
+  .blue h2 { background: #1d4ed8; } .blue { border-color: #1d4ed8; }
+  .green h2 { background: #15803d; } .green { border-color: #15803d; }
+  .purple h2 { background: #7c2d12; } .purple { border-color: #7c2d12; }
+  .red h2 { background: #b91c1c; } .red { border-color: #b91c1c; }
+  .amber h2 { background: #b45309; } .amber { border-color: #b45309; }
+  table { border-collapse: collapse; width: 100%; font-size: 7.5pt; }
+  th, td { border: 1px solid #94a3b8; padding: 2pt 4pt; text-align: left; vertical-align: top; }
+  th { background: #e2e8f0; font-weight: 700; }
+  ul { margin: 2pt 0; padding-left: 13pt; }
+  li { margin: 1pt 0; }
+  .mnemonic { background: #fef3c7; border: 1.5pt solid #b45309; padding: 3pt 6pt; font-weight: 700; border-radius: 4pt; display: inline-block; }
+  .err { background: #fee2e2; border-left: 3pt solid #b91c1c; padding: 3pt 5pt; font-size: 7.5pt; margin: 2pt 0; }
+  .wrong { color: #b91c1c; text-decoration: line-through; }
+  .right { color: #15803d; font-weight: 700; }
+  .hdr { display: flex; justify-content: space-between; align-items: baseline; }
+</style>
+</head>
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page">
+  <div class="hdr">
+    <h1>TODO: &lt;Subject&gt; Cheat Sheet (p.1)</h1>
+    <div style="font-size:8pt;color:#475569;">&lt;Student&gt; · Test &lt;day&gt;</div>
+  </div>
+
+  <div class="grid2">
+    <!-- TODO: 4-6 color-coded boxes, each a subtopic from the unit.
+         Use the box + color-class pattern: <div class="box blue">...</div>
+         Include tables, key terms, formulas, teacher-specific examples. -->
+
+    <div class="box blue">
+      <h2>TODO: Subtopic 1</h2>
+      <p>TODO: key facts, mnemonic, worked example.</p>
+    </div>
+
+    <div class="box green">
+      <h2>TODO: Subtopic 2</h2>
+      <p>TODO.</p>
+    </div>
+
+    <div class="box purple">
+      <h2>TODO: Subtopic 3 — comparison table</h2>
+      <table>
+        <tr><th>Type</th><th>Feature A</th><th>Feature B</th><th>Example</th></tr>
+        <tr><td>TODO</td><td>TODO</td><td>TODO</td><td>TODO</td></tr>
+      </table>
+    </div>
+
+    <div class="box amber">
+      <h2>TODO: Subtopic 4</h2>
+      <p>TODO.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page">
+  <div class="hdr">
+    <h1>TODO: &lt;Subject&gt; Cheat Sheet (p.2)</h1>
+    <div style="font-size:8pt;color:#475569;">Errors · Memory tricks</div>
+  </div>
+
+  <div class="grid2">
+    <div class="box blue">
+      <h2>TODO: Second-half Subtopic</h2>
+      <p>TODO.</p>
+    </div>
+
+    <div class="box amber">
+      <h2>TODO: Another second-half subtopic</h2>
+      <p>TODO.</p>
+    </div>
+  </div>
+
+  <!-- MANDATORY: the error-watch callout — one card per HIGH error from the audit -->
+  <div class="box red" style="margin-top:6pt;">
+    <h2>⚠ ERRORS IN MY NOTES — Watch Out!</h2>
+    <p style="font-size:7.5pt;"><em>Things I wrote wrong in homework. Learn the CORRECT version.</em></p>
+    <div class="grid2">
+      <div class="err"><span class="wrong">TODO: what student wrote</span> → <span class="right">TODO: correct answer</span></div>
+      <!-- TODO: one .err div per HIGH error -->
+    </div>
+  </div>
+
+  <div class="box amber" style="margin-top:6pt;">
+    <h2>Quick Memory Tricks</h2>
+    <div class="grid3" style="font-size:7.5pt;">
+      <div><strong>TODO: Count claim:</strong> <br/>e.g. 4 NS conditions — list in order</div>
+      <div><strong>TODO: Mnemonic:</strong> <br/>e.g. KPCOFGS</div>
+      <div><strong>TODO: Key table/value:</strong> <br/>e.g. cytochrome C chimp=0</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

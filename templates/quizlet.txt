@@ -1,0 +1,19 @@
+=== MUST KNOW ===
+TODO: Term 1	Definition.
+TODO: Term 2	Definition.
+TODO: Key mnemonic	The full mnemonic + what each letter/word stands for.
+TODO: Named mechanism	Definition + when it applies + example.
+TODO: Named counting claim (e.g., "4 conditions of X")	All N items listed in order.
+TODO: Look-alike distractor pair	WRONG = X. CORRECT = Y. Why different: ...
+=== SHOULD KNOW ===
+TODO: Secondary term	Definition.
+TODO: Example	Situation where it applies.
+
+# Format notes:
+# - Each line is: TERM<TAB>DEFINITION
+# - NO markdown formatting (Quizlet import is plain text)
+# - Two sections only: MUST KNOW and SHOULD KNOW
+# - ~30-50 total cards for a typical unit test
+# - Order by priority within each section (highest-yield first)
+# - Use cloze deletions sparingly — only when the cloze is higher-yield than term/definition
+# - Include one card for each look-alike-term trap you found in the student's work

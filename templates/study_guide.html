@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TODO: &lt;Student&gt;'s &lt;Subject&gt; Study Guide</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.5; }
+  header { background: #0f172a; color: #fff; padding: 18px 24px; }
+  header h1 { margin: 0; font-size: 22px; }
+  header .sub { font-size: 13px; color: #cbd5e1; }
+  .layout { display: flex; flex-direction: column; max-width: 1100px; margin: 0 auto; padding: 12px; }
+  @media (min-width: 900px) { .layout { flex-direction: row; gap: 16px; } }
+  nav { position: sticky; top: 10px; align-self: flex-start; }
+  @media (min-width: 900px) { nav { min-width: 240px; max-width: 240px; } }
+  nav button { display: block; width: 100%; text-align: left; background: #fff; border: 1px solid #e2e8f0; margin: 4px 0; padding: 10px 12px; border-radius: 6px; font: inherit; cursor: pointer; color: inherit; }
+  nav button.active { background: #0f172a; color: #fff; border-color: #0f172a; }
+  nav button.urgent { background: #fee2e2; color: #991b1b; border-color: #fca5a5; font-weight: 700; }
+  nav button:hover { filter: brightness(0.97); }
+  main { flex: 1; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  main h1 { margin-top: 0; font-size: 28px; border-bottom: 2px solid #cbd5e1; padding-bottom: 8px; }
+  main h2 { font-size: 18px; color: #0f172a; margin-top: 22px; margin-bottom: 8px; }
+  main h3 { font-size: 15px; margin: 8px 0; }
+  main p, main ul, main ol { margin: 8px 0; }
+  main ul, main ol { padding-left: 20px; }
+  main svg { max-width: 100%; height: auto; border: 1px solid #e2e8f0; border-radius: 6px; margin: 10px 0; display: block; }
+  table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
+  th, td { border: 1px solid #cbd5e1; padding: 7px 10px; text-align: left; vertical-align: top; }
+  th { background: #e2e8f0; }
+  .callout { border-left: 4px solid; padding: 12px 14px; margin: 12px 0; border-radius: 6px; }
+  .callout .title { font-weight: 700; margin-bottom: 4px; }
+  .callout.red { border-color: #dc2626; background: #fef2f2; color: #7f1d1d; }
+  .callout.amber { border-color: #d97706; background: #fffbeb; color: #78350f; }
+  .callout.blue { border-color: #2563eb; background: #eff6ff; color: #1e3a8a; }
+  .callout.green { border-color: #16a34a; background: #f0fdf4; color: #14532d; }
+  .err { border: 2px solid #fca5a5; background: #fef2f2; padding: 12px; border-radius: 8px; margin: 10px 0; }
+  .err .where { font-size: 11px; text-transform: uppercase; color: #991b1b; font-weight: 700; letter-spacing: 0.5px; }
+  .err .wrote { color: #991b1b; text-decoration: line-through; }
+  .err .correct { color: #15803d; font-weight: 700; margin-top: 4px; }
+  .err .why { font-size: 13px; color: #334155; margin-top: 6px; }
+  .retrieval { background: #f1f5f9; border: 1px solid #cbd5e1; border-radius: 6px; padding: 14px; margin-top: 20px; }
+  .retrieval .title { font-weight: 700; color: #0f172a; margin-bottom: 4px; }
+  .quiz-item { border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px; margin: 10px 0; background: #fff; cursor: pointer; }
+  .quiz-item .q { font-weight: 600; }
+  .quiz-item .opts { margin: 6px 0 0 10px; font-size: 14px; }
+  .quiz-item .toggle { font-size: 12px; color: #1d4ed8; margin-top: 4px; }
+  .quiz-item .reveal { display: none; margin-top: 10px; padding: 8px 10px; background: #f0fdf4; border-left: 4px solid #16a34a; font-size: 14px; border-radius: 4px; }
+  .quiz-item.open .reveal { display: block; }
+  .quiz-item .reveal .a { font-weight: 700; }
+  .quiz-item .reveal .why { font-style: italic; margin-top: 4px; }
+  footer { text-align: center; color: #64748b; font-size: 12px; padding: 16px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TODO: &lt;Student&gt;'s &lt;Subject&gt; Study Guide</h1>
+  <div class="sub">TODO: &lt;Unit&gt; · Test &lt;day + date&gt; · &lt;any exclusions&gt;</div>
+</header>
+
+<div class="layout">
+  <nav id="nav"></nav>
+  <main id="main"></main>
+</div>
+
+<footer>Made by Dad · TODO: &lt;number of grading passes&gt;</footer>
+
+<script>
+// ============================================================
+// DATA — fill in from audit + primary-source verification
+// ============================================================
+
+const ERRORS = [
+  // TODO: one object per HIGH/MEDIUM error from the student-work audit.
+  // Each shows up as a red "Watch Out!" card in the Errors section.
+  { where:"TODO: Ch X Section Y Q N",
+    wrote:'TODO: what the student actually wrote',
+    correct:'TODO: correct answer',
+    why:'TODO: why it matters — what concept is actually being missed' },
+];
+
+const NAV = [
+  {id:"overview", label:"Start Here"},
+  {id:"errors",   label:"⚠ Errors in My Notes", urgent:true},
+  // TODO: add content-section tabs matching the unit structure
+  {id:"plan",     label:"📅 Study Plan"},
+  {id:"quiz",     label:"✍️ Interactive Quiz"},
+];
+
+// SVGs — paste the full <svg>...</svg> content of each visual as a template literal.
+// Escape any backticks inside with \`. The generator can do this automatically.
+const SVGS = {
+  // TODO: each entry is name: `<svg ...>...</svg>`,
+};
+
+function errorsHTML() {
+  return ERRORS.map((e,i)=>`
+    <div class="err">
+      <div class="where">Error ${i+1} · ${e.where}</div>
+      <div class="wrote">${e.wrote}</div>
+      <div class="correct">→ ${e.correct}</div>
+      <div class="why"><strong>Why:</strong> ${e.why}</div>
+    </div>`).join("");
+}
+
+function retrieval(items) {
+  return `<div class="retrieval"><div class="title">✓ Check Yourself — say each answer out loud</div><ol>${items.map(q=>`<li>${q}</li>`).join("")}</ol></div>`;
+}
+
+const SECTIONS = {
+  overview: `
+    <h1>Welcome, TODO: Student.</h1>
+    <p>Complete study guide for the TODO: subject test on <strong>TODO: day + date</strong>.</p>
+    <div class="callout amber"><div class="title">⚡ Do these first, in this order</div>
+      <ol>
+        <li>Read <strong>"⚠ Errors in My Notes"</strong> — TODO: N mistakes from your homework.</li>
+        <li>Skim the content sections. Don't memorize yet.</li>
+        <li>Open the <strong>Study Plan</strong> and follow it.</li>
+      </ol>
+    </div>
+    <h2>What's on the test</h2>
+    <ul>
+      <li><strong>Format:</strong> TODO</li>
+      <li><strong>Scope:</strong> TODO</li>
+      <li><strong>NOT on the test:</strong> TODO: any exclusions</li>
+    </ul>
+  `,
+
+  errors: `
+    <h1>⚠ Errors in My Notes</h1>
+    <p>These are things you wrote in your reading guides / homework that are wrong. Fix them in your brain before studying anything else.</p>
+    <div class="callout red"><div class="title">Do this now</div>
+      Read each error card. Say the CORRECT answer out loud. Come back tomorrow and do it again.
+    </div>
+    ${errorsHTML()}
+  `,
+
+  // TODO: add subject-specific content sections. Each one:
+  // - Opens with an <h1>
+  // - Uses <h2> for subsections
+  // - Uses tables for comparisons (see CSS)
+  // - Embeds SVGs via ${SVGS.<name>}
+  // - Ends with ${retrieval([...])}
+  // - Calls out misconceptions with <div class="callout red">...</div>
+
+  plan: `
+    <h1>📅 Study Plan</h1>
+    <p>TODO: render the full study plan here or reference the PDF.</p>
+  `,
+
+  quiz: `
+    <h1>✍️ Interactive Quiz</h1>
+    <p>Click a question to reveal the answer + explanation.</p>
+    <div id="quiz-container"></div>
+  `,
+};
+
+const QUIZ = [
+  // TODO: one object per MC item. Distractors should include the student's actual errors.
+  { q:"TODO: question",
+    opts:["A) distractor","B) correct","C) distractor built from student's Error #N","D) distractor"],
+    a:"B",
+    why:"TODO: why B is right; why each distractor is wrong; which student error maps to which distractor." },
+];
+
+function renderQuiz() {
+  const c = document.getElementById("quiz-container");
+  if (!c) return;
+  c.innerHTML = QUIZ.map((item,i)=>`
+    <div class="quiz-item" data-i="${i}">
+      <div class="q">${i+1}. ${item.q}</div>
+      <ul class="opts">${item.opts.map(o=>`<li>${o}</li>`).join("")}</ul>
+      <div class="toggle">▶ Click to reveal answer</div>
+      <div class="reveal">
+        <div class="a">Answer: ${item.a}</div>
+        <div class="why">${item.why}</div>
+      </div>
+    </div>`).join("");
+  c.querySelectorAll(".quiz-item").forEach(el=>{
+    el.addEventListener("click", ()=>el.classList.toggle("open"));
+  });
+}
+
+function render() {
+  const nav = document.getElementById("nav");
+  nav.innerHTML = NAV.map(n=>`<button data-id="${n.id}" class="${n.urgent?"urgent":""}">${n.label}</button>`).join("");
+  nav.querySelectorAll("button").forEach(b=>b.addEventListener("click", ()=>show(b.dataset.id)));
+  show("overview");
+}
+function show(id) {
+  document.querySelectorAll("#nav button").forEach(b=>b.classList.toggle("active", b.dataset.id===id));
+  document.getElementById("main").innerHTML = SECTIONS[id] || SECTIONS.overview;
+  if (id === "quiz") renderQuiz();
+  window.scrollTo(0,0);
+}
+render();
+</script>
+</body>
+</html>
