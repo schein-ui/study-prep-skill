@@ -58,6 +58,57 @@ Use a CSS grid (2 columns) with color-coded boxes per subtopic. Include:
 
 Scaffold: `templates/cheat_sheet.html`. Verify it fits on 2 pages by opening the output PDF.
 
+## Consolidated print pack — required, ≤ 25 pages
+
+The student should be able to print ONE document, staple it, and study from it for the whole 3–4 day window. Combines: cover + TOC + study plan + glossary + study guide content + cheat sheet + quiz with answers inline.
+
+**Page budget (25 max — adjust within that cap):**
+
+| Section | Pages | Notes |
+|---------|-------|-------|
+| Cover | 1 | Title, student, test date, scope summary |
+| TOC + "how to use this pack" | 1 | Day-by-day index |
+| Study plan | 1–2 | Same content as standalone study_plan.md, compressed |
+| Glossary | 3–5 | Tight definitions; merge near-duplicates; cut "should-know" if over budget |
+| Study guide content | 8–12 | All content sections; SVGs inline at ½ page each |
+| Cheat sheet | 2 | Drop in cheat_sheet.html body verbatim |
+| Quiz bank | 4–6 | MC + SA + diagram items, with answers right under each question |
+
+**Output:** `student_downloads/<Student>_<Subject>_Complete.pdf`
+
+**Generator pattern:** assemble one styled HTML with `<section class="pack-section">` per section (with `page-break-before: always`), then Chrome headless `--print-to-pdf`. Scaffold: `templates/print_pack.html`.
+
+**MANDATORY 25-page verification:**
+```python
+import fitz
+n = len(fitz.open("student_downloads/<Student>_<Subject>_Complete.pdf"))
+assert n <= 25, f"Print pack is {n} pages — must be ≤ 25. Trim and rebuild."
+```
+
+If the pack runs over: trim in this order until under 25:
+1. Glossary "Should Know" tier — remove
+2. Repeated content between glossary + study guide — keep in glossary, link from study guide
+3. Long retrieval-practice prompts — collapse to 3–4 items per section
+4. Big SVGs that aren't on the test — cut or shrink
+5. Quiz section — split off as a separate `<Student>_<Subject>_Quiz.pdf` and trim the pack to just plan + glossary + study guide + cheat sheet
+
+Never go over 25. If after all trimming you're still over, the unit is too broad and you should split into Part 1 / Part 2 packs (e.g., "Cells" + "Genetics" rather than "Bio Semester 1").
+
+## Hard cap on every "full content" PDF: ≤ 25 pages
+
+Applies to:
+- Consolidated print pack
+- Full study guide PDF
+- Any "complete reference" artifact
+
+Does NOT apply to:
+- Cheat sheet (still 2 pages)
+- Quiz bank (separate file, can run longer)
+- Individual diagram PDFs (each is 1 page)
+- Process artifacts (QC report, grading scorecard)
+
+**Why this rule exists:** A 50-page packet is a wall. A 25-page packet is a 1-hour read or a 30-minute review. Compression forces clarity.
+
 ## Quiz bank conventions
 
 - MC: 4 options. **At least one option is a distractor built from the student's actual errors.**

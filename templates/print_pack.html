@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  Consolidated print pack — single PDF the student prints once and uses through the test.
+  HARD CAP: 25 pages total. After Chrome → PDF, verify page count ≤ 25. Trim if over.
+
+  Page budget (adjust within 25):
+    Cover (1) | TOC (1) | Study plan (1-2) | Glossary (3-5) |
+    Study guide content (8-12) | Cheat sheet (2) | Quiz bank (4-6)
+
+  TODO replacements:
+    <STUDENT>, <SUBJECT>, <UNIT>, <TEST_DATE_LONG>, <TEST_DATE_SHORT>
+    <SCOPE_LIST>            — comma-separated short scope summary for cover
+    {{study_plan_html}}     — markdown.markdown(study_plan.md)
+    {{glossary_html}}       — markdown.markdown(glossary.md)
+    {{study_guide_sections}}— concatenated <section class="pack-section">...</section> blocks
+                              extracted from the standalone HTML's SECTIONS const, with
+                              ${SVGS.x} and ${retrieval([...])} expanded
+    {{cheat_sheet_body}}    — extract <body>...</body> from cheat_sheet.html
+    {{cheat_sheet_style}}   — extract <style>...</style> from cheat_sheet.html (so cheat-sheet
+                              boxes/colors render correctly inside the pack)
+    {{quiz_bank_html}}      — markdown.markdown(quiz_bank.md)
+
+  Generator script pattern: see references/print_pack_generator_pattern.md
+-->
+<html lang="en"><head><meta charset="utf-8">
+<title><STUDENT> — <SUBJECT> Complete Print Pack</title>
+<style>
+  @page { size: letter; margin: 0.5in; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+         color: #1e293b; line-height: 1.4; margin: 0; font-size: 10.5pt; }
+
+  /* Section breaks. Each top-level <section class="pack-section"> starts on new page. */
+  .pack-section { page-break-before: always; }
+  .pack-section:first-of-type { page-break-before: auto; }
+
+  /* COVER (kept compact — 1 page) */
+  .cover { text-align: center; padding-top: 2in; }
+  .cover h1 { font-size: 32pt; color: #0f172a; margin: 0; }
+  .cover .sub { font-size: 14pt; color: #475569; margin-top: 12pt; }
+  .cover .test-info { margin-top: 1.5in; padding: 14pt; border: 2pt solid #0f172a;
+                       border-radius: 8pt; display: inline-block; text-align: left;
+                       max-width: 5in; }
+  .cover .test-info h2 { margin: 0 0 6pt 0; font-size: 13pt; color: #0f172a; }
+
+  /* TOC (1 page) */
+  .toc { padding: 0.3in 0.4in; }
+  .toc h2 { color: #0f172a; border-bottom: 2pt solid #0f172a; padding-bottom: 4pt; }
+  .toc ol { font-size: 11pt; line-height: 1.7; padding-left: 22pt; }
+
+  /* H1 per section — large + colored to anchor visually */
+  .pack-section > h1 { font-size: 20pt; color: #0f172a; border-bottom: 2pt solid #0f172a;
+                        padding-bottom: 5pt; margin: 0 0 10pt 0; }
+  h2 { font-size: 13pt; color: #0f172a; margin-top: 14pt; }
+  h3 { font-size: 11pt; margin-top: 10pt; }
+
+  /* Tables — compact (9.5pt is the page-budget-friendly default) */
+  table { width: 100%; border-collapse: collapse; margin: 4pt 0; font-size: 9.5pt;
+          page-break-inside: avoid; }
+  th, td { border: 1px solid #cbd5e1; padding: 3pt 5pt; vertical-align: top; }
+  th { background: #e2e8f0; }
+
+  ul, ol { padding-left: 22pt; margin: 4pt 0; }
+  li { margin: 1pt 0; }
+
+  blockquote { border-left: 3pt solid #94a3b8; margin: 4pt 0; padding: 2pt 10pt;
+               color: #475569; font-size: 10pt; }
+
+  /* Callouts — kept tight */
+  .callout { border-left: 4pt solid; padding: 6pt 10pt; margin: 8pt 0;
+             border-radius: 3pt; font-size: 9.5pt; page-break-inside: avoid; }
+  .callout.red    { border-color: #dc2626; background: #fef2f2; }
+  .callout.amber  { border-color: #d97706; background: #fffbeb; }
+  .callout.blue   { border-color: #2563eb; background: #eff6ff; }
+  .callout.green  { border-color: #16a34a; background: #f0fdf4; }
+  .callout .title { font-weight: 700; margin-bottom: 3pt; }
+
+  .retrieval { background: #f1f5f9; border: 1pt solid #cbd5e1; padding: 6pt 8pt;
+               margin-top: 8pt; border-radius: 3pt; font-size: 9.5pt;
+               page-break-inside: avoid; }
+  .retrieval .title { font-weight: 700; }
+
+  .dayblock { border-left: 4pt solid; padding: 6pt 10pt; margin: 5pt 0;
+              border-radius: 3pt; font-size: 9.5pt; page-break-inside: avoid; }
+  .dayblock.blue   { border-color: #2563eb; background: #eff6ff; }
+  .dayblock.green  { border-color: #16a34a; background: #f0fdf4; }
+  .dayblock.purple { border-color: #9333ea; background: #faf5ff; }
+  .dayblock.amber  { border-color: #d97706; background: #fffbeb; }
+  .dayblock .day { font-weight: 700; font-size: 11pt; }
+  .dayblock .sub { color: #64748b; font-size: 9pt; margin-bottom: 3pt; }
+
+  /* SVG sizing — half-page max so they don't blow up the page count */
+  svg { max-width: 100%; height: auto; max-height: 4.5in; display: block; margin: 6pt auto;
+        page-break-inside: avoid; }
+
+  /* Quiz items — answer inline directly under each Q (saves space vs separate answer key) */
+  .qi { border: 1pt solid #cbd5e1; padding: 6pt 8pt; margin: 5pt 0; border-radius: 4pt;
+        font-size: 9.5pt; page-break-inside: avoid; }
+  .qi .qq { font-weight: 600; }
+  .qi .qopts { margin: 3pt 0 3pt 18pt; }
+  .qi .ans { background: #f0fdf4; border-left: 3pt solid #16a34a; padding: 3pt 6pt;
+             margin-top: 4pt; }
+
+  /* Cheat-sheet styles get injected here by the generator so the cheat-sheet section
+     in the pack renders identically to the standalone cheat sheet */
+  {{cheat_sheet_style}}
+</style>
+</head><body>
+
+<!-- ========== COVER (1 page) ========== -->
+<section class="pack-section cover">
+  <h1><SUBJECT> — Complete Print Pack</h1>
+  <div class="sub"><STUDENT> · <UNIT></div>
+  <div class="test-info">
+    <h2>Test: <TEST_DATE_LONG></h2>
+    <p style="margin: 6pt 0 0 0; font-size: 9.5pt; color: #475569;"><SCOPE_LIST></p>
+  </div>
+</section>
+
+<!-- ========== TOC (1 page) ========== -->
+<section class="pack-section toc">
+  <h2>Contents</h2>
+  <ol>
+    <li>Study Plan</li>
+    <li>Glossary — every key term</li>
+    <li>Study Guide — content sections with diagrams</li>
+    <li>Cheat Sheet — 2-page summary (test-morning scan)</li>
+    <li>Practice Quiz Bank — with answers</li>
+  </ol>
+  <div style="margin-top: 0.4in; padding: 12pt; background: #fef3c7; border-left: 4pt solid #b45309; border-radius: 4pt; font-size: 10pt;">
+    <strong>How to use this pack:</strong>
+    <ul>
+      <li><strong>Day 1:</strong> Read Study Plan + skim Study Guide. Don't memorize.</li>
+      <li><strong>Day 2:</strong> Practice Quiz cold. Re-read missed sections.</li>
+      <li><strong>Day 3:</strong> Re-do diagrams + write SAs in full sentences.</li>
+      <li><strong>Day before test:</strong> Re-read errors. Light review.</li>
+      <li><strong>Test morning:</strong> Cheat Sheet front-to-back, 15 min ONCE. Stop.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ========== STUDY PLAN (1-2 pages) ========== -->
+<section class="pack-section">
+  {{study_plan_html}}
+</section>
+
+<!-- ========== GLOSSARY (3-5 pages) ========== -->
+<section class="pack-section">
+  {{glossary_html}}
+</section>
+
+<!-- ========== STUDY GUIDE CONTENT (8-12 pages) ========== -->
+{{study_guide_sections}}
+
+<!-- ========== CHEAT SHEET (2 pages — drop body verbatim) ========== -->
+<section class="pack-section">
+  {{cheat_sheet_body}}
+</section>
+
+<!-- ========== QUIZ BANK (4-6 pages, answers inline) ========== -->
+<section class="pack-section">
+  {{quiz_bank_html}}
+</section>
+
+</body></html>

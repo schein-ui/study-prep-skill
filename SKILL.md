@@ -127,8 +127,45 @@ Every run produces this tiered bundle. Each deliverable has a distinct pedagogic
 | **Cheat sheet** | HTML → 2-page PDF | Visual-dense scan | Test morning: 15-min scan only |
 | **Study plan** | Markdown + PDF + .docx | Day-by-day schedule | Day 0: set the pace |
 | **Flashcards** | Tab-separated .txt (Quizlet import) | Spaced repetition | Any day, phone/commute |
+| **Consolidated PRINT PACK** | Single PDF, ≤25 pages | One artifact to print + carry; staple-ready | Day 1 print → use through test |
 | **SVG visuals** | Inline in HTML + individual PDFs | Visual reinforcement | Throughout |
 | **QC report + grading scorecard** | Markdown + PDF | Process artifacts for the parent | Parent review |
+
+### Consolidated print pack — required, ≤ 25 pages
+
+Single PDF combining: cover + TOC + study plan + glossary + study guide content + cheat sheet + quiz bank with answers. The student prints ONE document, staples it, carries it to the kitchen table. No flipping between tabs, no opening 5 PDFs.
+
+**Target structure (page budget — adjust within the 25-page cap):**
+- Cover (1)
+- TOC + "how to use this pack" (1)
+- Study plan (1–2)
+- Glossary (3–5)
+- Study guide content (8–12)
+- Cheat sheet (2)
+- Quiz bank with answers inline (4–6)
+
+**File:** `<Student>_<Subject>_Complete.pdf` in the student_downloads/ folder.
+
+### Hard cap: full study guide ≤ 25 pages
+
+This applies to **every full-content artifact** — the consolidated print pack, the study-guide PDF, and any other "full content" output. The cheat sheet stays at 2 pages; the quiz bank can be longer if needed (separate file). But the comprehensive document itself never exceeds 25 pages.
+
+**Why:** a 50-page study packet is a wall, not a tool. A 25-page packet is a 1-hour read or a 30-minute review. Compression forces clarity — if a section feels bloated, cut.
+
+**How to enforce when generating:**
+1. Use 10–10.5pt body text, 22pt H1, 13pt H2 — not "look like a textbook" 12pt+.
+2. Keep tables compact (9.5pt cell text, 3pt padding).
+3. Embedded SVGs sized to fit in ½–⅔ of a page — not full page each.
+4. Any retrieval/check-yourself blocks are tight 5–6 line callouts, not full pages.
+5. **Verify after generation:** `python3 -c "import fitz; print(len(fitz.open('path.pdf')))"` — if > 25, trim.
+6. If the natural content really needs more than 25 pages, split into the consolidated pack PLUS a separate "Reference / Glossary" PDF — but the consolidated pack itself must stay ≤ 25.
+
+**Common over-runs and what to cut:**
+- Repeated explanations across glossary + study guide → keep in one place, reference from the other
+- 3-line bulletpoints when a one-line dash list would do
+- Multiple "Watch Out" callouts with the same takeaway — consolidate to one
+- Quiz "scoring target" answers > 6 lines each — trim to 3
+- Unused sections (e.g., "Test traps" duplicating the errors-from-notes block)
 
 **Critical delivery format requirements:**
 - **The interactive guide is STANDALONE HTML.** No React, no JSX, no Tailwind, no build step. Plain HTML + CSS + vanilla JS. All SVGs inlined. Works offline, works on phone, works on any browser. The student double-clicks it.
@@ -326,6 +363,8 @@ Each template has TODO markers where subject-specific content goes. Don't publis
 [ ] Grading scorecard includes honest retrospective for every pass — no silent re-issues
 [ ] README_for_<student>.txt tells them what to double-click first (and cites the live URL)
 [ ] Cheat sheet fits on exactly 2 pages (verify via PDF)
+[ ] Consolidated print pack PDF generated AND verified ≤ 25 pages (via fitz)
+[ ] Full study guide PDF verified ≤ 25 pages (via fitz)
 [ ] Standalone HTML opens offline and renders all SVGs inline (no external refs)
 [ ] Live URL renders identical content to local HTML (md5 match)
 ```
