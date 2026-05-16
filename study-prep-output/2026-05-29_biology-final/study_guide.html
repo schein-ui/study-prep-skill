@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chloe's Biology Final Study Guide — May 29, 2026</title>
+<style>
+  :root {
+    --bg: #fefcf8;
+    --ink: #1c1c1c;
+    --accent: #1f6f3f;
+    --accent-light: #d4ead7;
+    --warn: #b1530a;
+    --warn-light: #fbe5c8;
+    --hint: #2a4d7a;
+    --hint-light: #dde7f4;
+    --card: #ffffff;
+    --border: #d8d2c4;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; line-height: 1.5; }
+  .wrapper { max-width: 880px; margin: 0 auto; padding: 1.2rem 1.4rem 4rem; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  h1 { color: var(--accent); margin: 0 0 .3rem; font-size: 1.8rem; }
+  .subtitle { color: #555; font-size: 1rem; margin: 0; }
+  nav { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: .9rem 1rem; margin-bottom: 1.5rem; position: sticky; top: 0; z-index: 10; }
+  nav h2 { margin: 0 0 .4rem; font-size: .95rem; color: #444; text-transform: uppercase; letter-spacing: .04em; }
+  nav ol { margin: 0; padding-left: 1.2rem; columns: 2; column-gap: 1.4rem; font-size: .92rem; }
+  nav a { color: var(--accent); text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.3rem 1.4rem; margin-bottom: 1.4rem; }
+  section > h2 { margin-top: 0; color: var(--accent); font-size: 1.45rem; border-bottom: 2px solid var(--accent-light); padding-bottom: .35rem; }
+  h3 { color: #2a4d2a; margin-top: 1.4rem; font-size: 1.15rem; }
+  h4 { color: #444; margin-top: 1rem; margin-bottom: .25rem; }
+  p, li { font-size: .98rem; }
+  ul { padding-left: 1.3rem; }
+  table { border-collapse: collapse; width: 100%; margin: .7rem 0; font-size: .92rem; }
+  th, td { border: 1px solid var(--border); padding: .45rem .55rem; text-align: left; vertical-align: top; }
+  th { background: var(--accent-light); color: #14492c; }
+
+  .callout { border-radius: 8px; padding: .8rem 1rem; margin: .9rem 0; font-size: .94rem; }
+  .callout.tip { background: var(--hint-light); border-left: 4px solid var(--hint); }
+  .callout.warn { background: var(--warn-light); border-left: 4px solid var(--warn); }
+  .callout.warn .label { color: var(--warn); font-weight: 700; text-transform: uppercase; font-size: .8rem; letter-spacing: .04em; }
+  .callout.tip .label { color: var(--hint); font-weight: 700; text-transform: uppercase; font-size: .8rem; letter-spacing: .04em; }
+
+  details.quiz { margin: .7rem 0; border: 1px solid var(--border); border-radius: 8px; padding: .6rem .9rem; background: #fdfbf3; }
+  details.quiz summary { cursor: pointer; font-weight: 600; color: #333; }
+  details.quiz summary:hover { color: var(--accent); }
+  details.quiz[open] summary { color: var(--accent); margin-bottom: .4rem; }
+  details.quiz .answer { color: #1f6f3f; font-size: .94rem; margin-top: .3rem; padding-top: .5rem; border-top: 1px dashed var(--border); }
+
+  .diagram { display: block; margin: 1rem auto; max-width: 100%; height: auto; background: white; border: 1px solid var(--border); border-radius: 8px; padding: .5rem; }
+
+  .key-fact { background: #fff9e6; border-left: 4px solid #d4a300; padding: .6rem .9rem; border-radius: 4px; margin: .8rem 0; font-size: .95rem; }
+  .key-fact .label { color: #8a6800; font-weight: 700; text-transform: uppercase; font-size: .75rem; letter-spacing: .05em; }
+
+  code, .mono { font-family: "SF Mono", "Menlo", "Monaco", Consolas, monospace; background: #f0ede4; padding: .1em .3em; border-radius: 3px; font-size: .92em; }
+
+  .exclusion { background: #ffe9e1; border: 2px solid #d05536; border-radius: 8px; padding: .8rem 1rem; margin: 1rem 0; }
+  .exclusion .label { color: #b03d20; font-weight: 700; font-size: .85rem; text-transform: uppercase; letter-spacing: .04em; }
+
+  footer { text-align: center; color: #888; font-size: .85rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+
+  @media (max-width: 600px) {
+    nav ol { columns: 1; }
+    .wrapper { padding: .8rem .9rem 3rem; }
+    h1 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<header>
+  <h1>Chloe's Biology Final Study Guide</h1>
+  <p class="subtitle">Friday, May 29, 2026 · 1–3 PM · North Gym · Bertram / Deasy / Seatter</p>
+</header>
+
+<nav>
+  <h2>Jump to a topic</h2>
+  <ol>
+    <li><a href="#how-to-use">How to use this guide</a></li>
+    <li><a href="#topic-1">I. Foundational Science</a></li>
+    <li><a href="#topic-2">II. RNA &amp; Protein Synthesis</a></li>
+    <li><a href="#topic-3">III. Meiosis</a></li>
+    <li><a href="#topic-4">IV. Genetics</a></li>
+    <li><a href="#topic-5">V. Evolution</a></li>
+    <li><a href="#topic-6">VI. Ecology</a></li>
+    <li><a href="#topic-7">VII. The Human Body</a></li>
+  </ol>
+</nav>
+
+<section id="how-to-use">
+  <h2>How to use this guide</h2>
+  <p>You have 13 days. Use the day-by-day study plan as your roadmap and this guide as your source-of-truth.</p>
+  <ul>
+    <li><strong>Read top-to-bottom by topic.</strong> Each topic has the big idea, key vocab in context, common confusions, and a few self-check questions you can click to reveal answers.</li>
+    <li><strong>Watch-Out cards (orange) flag classic test traps.</strong> Pay extra attention to these.</li>
+    <li><strong>Click "Check yourself" boxes</strong> to test recall as you go. Don't peek at the answer before trying.</li>
+    <li><strong>The quiz bank PDF</strong> is your harder retrieval practice. The cheat sheet is only for the night before / test morning.</li>
+  </ul>
+  <div class="exclusion">
+    <span class="label">Teacher exclusion — DO NOT STUDY</span><br>
+    From Ch. 18 reading guide: <em>"SKIP EVOLUTION VERSUS GENETIC EQUILIBRIUM AND THE HARDY-WEINBERG PRINCIPLE."</em> This is NOT on the exam.
+  </div>
+</section>
+
+<!-- ============================================== -->
+<!-- TOPIC I: FOUNDATIONAL SCIENCE -->
+<!-- ============================================== -->
+<section id="topic-1">
+  <h2>I. Foundational Science</h2>
+  <p>Three small but real exam points: what a hypothesis is, the parts of an experiment, and which graph fits which data.</p>
+
+  <h3>Hypothesis</h3>
+  <p>A <strong>hypothesis</strong> is a testable, falsifiable prediction — usually written as "<em>If [I do X], then [Y will happen].</em>" It must be specific enough that an experiment could prove it wrong.</p>
+
+  <h3>The four parts of any experiment</h3>
+  <table>
+    <tr><th>Term</th><th>What it is</th><th>Example (testing music & plant growth)</th></tr>
+    <tr><td><strong>Independent variable</strong></td><td>The one thing YOU change.</td><td>Whether plants get music or silence.</td></tr>
+    <tr><td><strong>Dependent variable</strong></td><td>What you MEASURE (depends on the IV).</td><td>Plant height after 3 weeks.</td></tr>
+    <tr><td><strong>Control</strong></td><td>The group that gets NO treatment, for comparison.</td><td>The silent plants.</td></tr>
+    <tr><td><strong>Constants</strong></td><td>Everything you keep the SAME across all groups so it can't mess up your results.</td><td>Same water, same soil, same sunlight, same plant species, same temperature.</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    A <strong>control</strong> is a whole group. <strong>Constants</strong> are individual variables you hold steady. Don't confuse them on the test.
+  </div>
+
+  <h3>Which graph for which data?</h3>
+  <ul>
+    <li><strong>Bar graph</strong> — comparing CATEGORIES (4 species, 3 brands of fertilizer).</li>
+    <li><strong>Line graph</strong> — change over TIME, or any continuous trend (growth over weeks).</li>
+    <li><strong>Pie chart</strong> — parts of a WHOLE (% of each blood type in a sample).</li>
+  </ul>
+
+  <details class="quiz">
+    <summary>Check yourself: In an experiment on fertilizer and tomato yield, what's the IV, DV, and one constant?</summary>
+    <div class="answer">IV = type/amount of fertilizer. DV = tomato yield (e.g., # of tomatoes or total weight). Constants: same tomato variety, same water amount, same sunlight, same soil type, same pot size.</div>
+  </details>
+</section>
+
+<!-- ============================================== -->
+<!-- TOPIC II: RNA & PROTEIN SYNTHESIS -->
+<!-- ============================================== -->
+<section id="topic-2">
+  <h2>II. RNA &amp; Protein Synthesis (Ch. 14)</h2>
+
+  <div class="key-fact">
+    <span class="label">Central Dogma</span><br>
+    <strong>DNA → (transcription) → RNA → (translation) → Protein</strong><br>
+    Memorize this arrow chain. It's the backbone of everything in this unit.
+  </div>
+
+  <h3>Step 1: Transcription (DNA → mRNA)</h3>
+  <ul>
+    <li><strong>Where:</strong> nucleus (because that's where DNA lives — DNA can't leave!)</li>
+    <li><strong>Enzyme:</strong> <strong>RNA polymerase</strong></li>
+    <li><strong>What happens:</strong>
+      <ol>
+        <li>RNA polymerase binds to DNA at a <strong>promoter</strong> (a special sequence that says "start here").</li>
+        <li>It unzips a short section of the DNA double helix.</li>
+        <li>It reads ONE strand of the DNA as a template and builds a complementary mRNA strand alongside it.</li>
+        <li>The mRNA detaches and leaves the nucleus.</li>
+      </ol>
+    </li>
+  </ul>
+
+  <h3>Base-pairing rules for transcription</h3>
+  <table>
+    <tr><th>DNA template</th><th>mRNA</th></tr>
+    <tr><td>A</td><td>U <em>(NOT T — RNA uses uracil)</em></td></tr>
+    <tr><td>T</td><td>A</td></tr>
+    <tr><td>G</td><td>C</td></tr>
+    <tr><td>C</td><td>G</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    RNA has <strong>uracil (U) instead of thymine (T)</strong>. If you write T in an mRNA strand on the test, you'll lose the point.
+  </div>
+
+  <h3>DNA vs. RNA — the 3 differences</h3>
+  <table>
+    <tr><th></th><th>DNA</th><th>RNA</th></tr>
+    <tr><td>Strands</td><td>Double-stranded</td><td>Single-stranded</td></tr>
+    <tr><td>Sugar</td><td>Deoxyribose</td><td>Ribose</td></tr>
+    <tr><td>Bases</td><td>A, T, G, C</td><td>A, <strong>U</strong>, G, C</td></tr>
+    <tr><td>Where it lives</td><td>Nucleus (can't leave)</td><td>Made in nucleus, can travel to cytoplasm</td></tr>
+  </table>
+
+  <h3>Step 2: Translation (mRNA → Protein)</h3>
+  <ul>
+    <li><strong>Where:</strong> cytoplasm, at a <strong>ribosome</strong></li>
+    <li><strong>How it reads the message:</strong> in <strong>codons</strong> — groups of 3 mRNA bases. Each codon = one amino acid.</li>
+    <li><strong>Players involved:</strong>
+      <ul>
+        <li><strong>mRNA</strong> — carries the message.</li>
+        <li><strong>rRNA</strong> — makes up the ribosome itself.</li>
+        <li><strong>tRNA</strong> — has an <strong>anticodon</strong> on one end and the matching <strong>amino acid</strong> on the other. The anticodon pairs with the mRNA codon, and the amino acid joins the growing chain.</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Reading the codon wheel</h3>
+  <p>Start with your mRNA codon. Read the first base from the CENTER, then the second base in the next ring, then the third base on the outside. Where they meet = your amino acid.</p>
+  <p><strong>Special codons:</strong></p>
+  <ul>
+    <li><strong>AUG</strong> = <strong>start codon</strong> (also codes for methionine / Met). Every protein begins with Met.</li>
+    <li><strong>UAA, UAG, UGA</strong> = <strong>stop codons</strong>. Ribosome releases the protein here.</li>
+  </ul>
+
+  <div class="callout tip">
+    <span class="label">Worked example</span><br>
+    DNA: <code>TAC-GGA-TTC-ACG-ATT</code><br>
+    mRNA (using base-pairing): <code>AUG-CCU-AAG-UGC-UAA</code><br>
+    Amino acids: Met (start) – Pro – Lys – Cys – STOP<br>
+    → Protein = Met–Pro–Lys–Cys (4 amino acids long)
+  </div>
+
+  <h3>Mutations</h3>
+  <p>A <strong>mutation</strong> is any change in the DNA sequence. Types you need to know:</p>
+
+  <h4>Point mutations (one base changes)</h4>
+  <table>
+    <tr><th>Type</th><th>What it does</th><th>Effect on protein</th></tr>
+    <tr><td><strong>Silent</strong> substitution</td><td>The codon changes but still codes for the same amino acid.</td><td>NONE — protein is unchanged.</td></tr>
+    <tr><td><strong>Missense</strong> substitution</td><td>The codon changes to one that codes for a different amino acid.</td><td>ONE amino acid is different. May or may not affect function.</td></tr>
+    <tr><td><strong>Nonsense</strong> substitution</td><td>The codon changes to a STOP codon.</td><td>Protein is cut short. Usually broken / non-functional.</td></tr>
+  </table>
+
+  <h4>Frameshift mutations (insertion or deletion)</h4>
+  <p>When a base is <strong>added</strong> or <strong>removed</strong>, every codon downstream gets shifted by one — so the entire reading frame is messed up.</p>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    Frameshift mutations are almost always <strong>devastating</strong> — every codon after the mutation reads wrong, so the rest of the protein is essentially gibberish.
+  </div>
+
+  <h3>Differentiation &amp; gene expression</h3>
+  <p>Every cell in your body has the SAME DNA. But a skin cell looks nothing like a neuron. Why? <strong>Different genes are turned on in different cells.</strong> This selective expression is called <strong>differentiation</strong>, and it's controlled by transcription factors and master "switch" genes (like Hox genes).</p>
+
+  <details class="quiz">
+    <summary>Check yourself: A DNA strand reads TAC-GTG-AAT-ATT. What's the mRNA, and what amino acids does it code for?</summary>
+    <div class="answer">mRNA: AUG-CAC-UUA-UAA. Codons: AUG (Met/start) – CAC (His) – UUA (Leu) – UAA (STOP). Protein = Met-His-Leu (3 amino acids).</div>
+  </details>
+
+  <details class="quiz">
+    <summary>Check yourself: Why is a frameshift mutation usually worse than a missense substitution?</summary>
+    <div class="answer">A missense changes ONE amino acid. A frameshift shifts the reading frame so EVERY codon downstream is now misread — the rest of the protein is essentially gibberish.</div>
+  </details>
+</section>
+
+<!-- ============================================== -->
+<!-- TOPIC III: MEIOSIS -->
+<!-- ============================================== -->
+<section id="topic-3">
+  <h2>III. Meiosis (Ch. 12.4)</h2>
+
+  <div class="key-fact">
+    <span class="label">Big picture</span><br>
+    Meiosis takes <strong>one diploid (2n) cell</strong> and produces <strong>four haploid (n) cells</strong> — the gametes (sperm or eggs). It runs through TWO rounds of division. Its job is (a) to halve the chromosome number so fertilization restores the right diploid number, and (b) to shuffle genes so every offspring is genetically unique.
+  </div>
+
+  <h3>Chromosome numbers in humans</h3>
+  <ul>
+    <li>Body (somatic) cells = <strong>diploid, 2n = 46</strong> chromosomes (23 pairs).</li>
+    <li>Gametes (sperm + egg) = <strong>haploid, n = 23</strong> chromosomes.</li>
+    <li>Fertilized zygote = 23 + 23 = 46 = back to 2n. ✔</li>
+  </ul>
+
+  <h3>The phases (Meiosis I and Meiosis II)</h3>
+  <table>
+    <tr><th>Phase</th><th>What happens</th></tr>
+    <tr><td><strong>Prophase I</strong></td><td>Homologous chromosomes pair up to form <strong>tetrads</strong> (4 chromatids). <strong>Crossing over</strong> happens here — chromatids swap pieces. This is where the FIRST source of genetic variation comes in.</td></tr>
+    <tr><td><strong>Metaphase I</strong></td><td>Tetrads line up in the middle. Each homologous pair lines up <strong>randomly</strong> — this is <strong>independent assortment</strong>, the second source of variation.</td></tr>
+    <tr><td><strong>Anaphase I</strong></td><td>Homologous pairs are pulled APART to opposite poles. (Sister chromatids stay together for now.)</td></tr>
+    <tr><td><strong>Telophase I / Cytokinesis</strong></td><td>Two daughter cells form. They are <strong>not identical</strong> to each other.</td></tr>
+    <tr><td colspan="2" style="background:#fff9e6;"><strong>NO INTERPHASE between Meiosis I and II</strong> — chromosomes do NOT replicate again!</td></tr>
+    <tr><td><strong>Prophase II</strong></td><td>Nuclear membrane disappears again in each of the 2 daughter cells.</td></tr>
+    <tr><td><strong>Metaphase II</strong></td><td>Chromosomes line up in the middle (single file this time, not in pairs).</td></tr>
+    <tr><td><strong>Anaphase II</strong></td><td>Sister chromatids are pulled apart.</td></tr>
+    <tr><td><strong>Telophase II / Cytokinesis</strong></td><td>Four haploid daughter cells. All genetically unique.</td></tr>
+  </table>
+
+  <h3>Mitosis vs. Meiosis</h3>
+  <table>
+    <tr><th></th><th>Mitosis</th><th>Meiosis</th></tr>
+    <tr><td>Purpose</td><td>Growth, repair, asexual reproduction</td><td>Sexual reproduction — gamete formation</td></tr>
+    <tr><td>Rounds of division</td><td>1</td><td>2</td></tr>
+    <tr><td>Daughter cells</td><td>2 — genetically IDENTICAL</td><td>4 — genetically DIFFERENT</td></tr>
+    <tr><td>Chromosome number</td><td>Same as parent (2n)</td><td>HALF the parent (n)</td></tr>
+    <tr><td>Crossing over?</td><td>NO</td><td>YES (Prophase I)</td></tr>
+  </table>
+
+  <h3>Spermatogenesis vs. Oogenesis</h3>
+  <table>
+    <tr><th></th><th>Spermatogenesis (male)</th><th>Oogenesis (female)</th></tr>
+    <tr><td>Final # of gametes</td><td><strong>4 sperm</strong></td><td><strong>1 egg + 3 polar bodies</strong> (which degenerate)</td></tr>
+    <tr><td>Cytoplasm</td><td>Roughly equal in each sperm</td><td>All cytoplasm goes into the single egg so it can support a future embryo</td></tr>
+    <tr><td>Timing</td><td>Continuous from puberty onward</td><td>Eggs start meiosis BEFORE BIRTH and are stuck in Prophase I until ovulation — one per cycle</td></tr>
+  </table>
+
+  <h3>Why does meiosis produce variation?</h3>
+  <ol>
+    <li><strong>Crossing over</strong> (Prophase I) — chromatids swap pieces, creating new combinations of alleles.</li>
+    <li><strong>Independent assortment</strong> (Metaphase I) — each homologous pair lines up randomly, so each gamete gets a random mix of mom's and dad's chromosomes.</li>
+    <li><strong>Random fertilization</strong> — any sperm could fertilize any egg.</li>
+  </ol>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    Don't confuse <strong>independent assortment</strong> (in meiosis, about how chromosomes line up) with <strong>Mendel's Law of Independent Assortment</strong> (in genetics, about how alleles for different traits sort independently into gametes). They're related — Mendel's law is the CONSEQUENCE of independent assortment in meiosis — but the test may ask about either one.
+  </div>
+
+  <details class="quiz">
+    <summary>Check yourself: Why does an egg cell keep almost all the cytoplasm during oogenesis?</summary>
+    <div class="answer">Because the egg has to support a developing embryo with all its nutrients until the placenta takes over. The 3 polar bodies are basically discards — they get rid of the extra chromosomes but don't need their own cytoplasm.</div>
+  </details>
+</section>
+
+<!-- ============================================== -->
+<!-- TOPIC IV: GENETICS -->
+<!-- ============================================== -->
+<section id="topic-4">
+  <h2>IV. Genetics (Ch. 12)</h2>
+
+  <h3>Mendel's three laws</h3>
+  <ol>
+    <li><strong>Law of Dominance:</strong> One allele can be dominant over another. The dominant allele is expressed if even one copy is present.</li>
+    <li><strong>Law of Segregation:</strong> The two alleles for each gene SEPARATE into different gametes during meiosis. (Each gamete gets only one.)</li>
+    <li><strong>Law of Independent Assortment:</strong> Alleles for DIFFERENT genes separate independently from each other.</li>
+  </ol>
+
+  <h3>Key vocab review</h3>
+  <table>
+    <tr><th>Term</th><th>Means</th><th>Example</th></tr>
+    <tr><td>Gene</td><td>A segment of DNA for one trait</td><td>The flower-color gene</td></tr>
+    <tr><td>Allele</td><td>A version of a gene</td><td>Purple allele (P) or white allele (p)</td></tr>
+    <tr><td>Homozygous</td><td>Two identical alleles</td><td>PP or pp</td></tr>
+    <tr><td>Heterozygous</td><td>Two different alleles</td><td>Pp</td></tr>
+    <tr><td>Genotype</td><td>The letters</td><td>Pp</td></tr>
+    <tr><td>Phenotype</td><td>The physical trait</td><td>Purple flowers</td></tr>
+  </table>
+
+  <h3>Monohybrid Punnett squares</h3>
+  <p>Cross one trait at a time. Heterozygous × heterozygous (Pp × Pp) gives the classic <strong>3:1 phenotype ratio</strong>.</p>
+
+  <pre style="background:#f0ede4; padding: .5rem; border-radius: 4px; font-family: monospace;">       P     p
+   +-----+-----+
+ P |  PP |  Pp |
+   +-----+-----+
+ p |  Pp |  pp |
+   +-----+-----+
+
+Genotype ratio: 1 PP : 2 Pp : 1 pp
+Phenotype ratio: 3 purple : 1 white</pre>
+
+  <h3>Dihybrid Punnett squares</h3>
+  <p>Cross TWO traits at once. Make a 4×4 grid using all 4 possible gamete combinations from each parent. Heterozygous × heterozygous (TtYy × TtYy) gives the classic <strong>9:3:3:1 ratio</strong>:</p>
+  <ul>
+    <li>9 tall yellow : 3 tall green : 3 short yellow : 1 short green</li>
+  </ul>
+
+  <div class="callout tip">
+    <span class="label">Tip</span><br>
+    The 9:3:3:1 ratio ALWAYS comes from a heterozygous × heterozygous dihybrid. Memorize it — and recognize when it applies on the test.
+  </div>
+
+  <h3>Non-Mendelian patterns</h3>
+
+  <h4>Incomplete Dominance</h4>
+  <p>Neither allele is fully dominant. The heterozygote shows a <strong>BLEND</strong>. Classic example: red snapdragon × white snapdragon = pink snapdragon. A pink × pink cross gives <strong>1 red : 2 pink : 1 white</strong>.</p>
+
+  <h4>Codominance</h4>
+  <p>Both alleles are fully expressed at the same time. Classic example: human <strong>AB blood type</strong> — both A antigens and B antigens show up together on the red blood cells (not blended; both are there).</p>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    <strong>Incomplete dominance = blended</strong> (red + white → pink). <strong>Codominance = both shown</strong> (A + B → AB, both visible). The test loves this distinction.
+  </div>
+
+  <h4>Multiple Alleles</h4>
+  <p>A gene with MORE than 2 alleles in the population. Best example: <strong>human blood type</strong> — three alleles (Iᴬ, Iᴮ, i) → four possible phenotypes (A, B, AB, O). Iᴬ and Iᴮ are codominant with each other; i is recessive to both.</p>
+
+  <table>
+    <tr><th>Blood type</th><th>Possible genotypes</th></tr>
+    <tr><td>A</td><td>Iᴬ Iᴬ or Iᴬ i</td></tr>
+    <tr><td>B</td><td>Iᴮ Iᴮ or Iᴮ i</td></tr>
+    <tr><td>AB</td><td>Iᴬ Iᴮ (codominance!)</td></tr>
+    <tr><td>O</td><td>i i (only one possibility — both must be recessive)</td></tr>
+  </table>
+
+  <h4>Polygenic Traits</h4>
+  <p>Traits controlled by MANY genes — like human height, skin color, eye color shades. These give a <strong>bell-curve (normal) distribution</strong> in a population, not just a few discrete categories.</p>
+
+  <h4>Sex-Linked (X-linked) Inheritance</h4>
+  <p>Genes on the X chromosome show different inheritance patterns in males vs. females, because:</p>
+  <ul>
+    <li>Females are XX — they have TWO X's, so a recessive trait needs both X's to show.</li>
+    <li>Males are XY — they have only ONE X, so a recessive allele on it shows up automatically.</li>
+  </ul>
+  <p>This is why <strong>color-blindness and hemophilia are way more common in males</strong> — about 1 in 12 males is red-green color-blind vs. only ~1 in 200 females.</p>
+
+  <div class="callout tip">
+    <span class="label">X-linked Punnett notation</span><br>
+    Write the gene as a superscript on X. For color-blindness: Xᴮ = normal, Xᵇ = color-blind.<br>
+    Carrier mother (Xᴮ Xᵇ) × normal father (Xᴮ Y):<br>
+    Offspring: Xᴮ Xᴮ (normal girl), Xᴮ Xᵇ (carrier girl), Xᴮ Y (normal boy), Xᵇ Y (color-blind boy).<br>
+    Half the SONS will be color-blind.
+  </div>
+
+  <h3>Pedigrees</h3>
+  <ul>
+    <li>Squares = males, circles = females. Shaded = affected.</li>
+    <li>Horizontal line between two shapes = mating. Vertical line down = offspring.</li>
+    <li><strong>Autosomal dominant:</strong> trait appears in every generation; affects M and F equally; affected parent → likely affected child.</li>
+    <li><strong>Autosomal recessive:</strong> can skip generations; two unaffected (carrier) parents can have an affected child.</li>
+    <li><strong>X-linked recessive:</strong> mostly affects MALES; an affected male's daughters are all carriers; can skip a generation through carrier mothers.</li>
+  </ul>
+
+  <h3>Karyotypes</h3>
+  <p>A picture of all 46 chromosomes lined up in pairs by size and shape. Used to:</p>
+  <ul>
+    <li>Detect <strong>biological sex</strong> — look at pair 23. XX = female, XY = male.</li>
+    <li>Detect chromosomal abnormalities like <strong>Trisomy 21 (Down syndrome)</strong> — 3 copies of chromosome 21 instead of 2.</li>
+  </ul>
+
+  <details class="quiz">
+    <summary>Check yourself: A man with blood type O marries a woman with blood type AB. What blood types can their children have? Show your reasoning.</summary>
+    <div class="answer">Father is ii (only one option for type O). Mother is Iᴬ Iᴮ. Cross: i × Iᴬ → Iᴬi (type A). i × Iᴮ → Iᴮi (type B). Children can be type A or type B. NEVER AB and NEVER O.</div>
+  </details>
+
+  <details class="quiz">
+    <summary>Check yourself: Why are X-linked recessive disorders much more common in males?</summary>
+    <div class="answer">Males are XY — they only have ONE X. If a recessive allele is on their X, there's no second X to mask it. Females are XX — they need the recessive allele on BOTH X's to show the trait, which is much less likely.</div>
+  </details>
+</section>
+
+<!-- ============================================== -->
+<!-- TOPIC V: EVOLUTION -->
+<!-- ============================================== -->
+<section id="topic-5">
+  <h2>V. Evolution (Ch. 17 &amp; 18)</h2>
+
+  <div class="exclusion">
+    <span class="label">REMINDER — Teacher exclusion</span><br>
+    SKIP Hardy-Weinberg / genetic equilibrium. NOT on the exam.
+  </div>
+
+  <h3>Darwin's big idea</h3>
+  <p>On his 5-year journey on HMS Beagle (started 1831), Darwin noticed <strong>three patterns of biodiversity</strong>:</p>
+  <ol>
+    <li><strong>Species vary globally</strong> — similar habitats around the world have DIFFERENT but ecologically similar species.</li>
+    <li><strong>Species vary locally</strong> — different but RELATED species occupy different habitats within a local area.</li>
+    <li><strong>Species vary over time</strong> — fossils of extinct animals resemble living species (e.g., the giant Glyptodont resembles a modern armadillo).</li>
+  </ol>
+
+  <h3>Who influenced Darwin?</h3>
+  <table>
+    <tr><th>Thinker</th><th>Contribution</th></tr>
+    <tr><td><strong>Hutton &amp; Lyell</strong></td><td>Geologists. Argued Earth is VERY OLD and shaped by slow processes that still work today (uniformitarianism). This gave Darwin enough time for evolution.</td></tr>
+    <tr><td><strong>Lamarck</strong></td><td>Proposed that organisms could change in their lifetime and pass acquired traits to offspring. <strong>Mechanism was wrong</strong> (acquired traits aren't inherited), but he was on the right track that species change over time.</td></tr>
+    <tr><td><strong>Malthus</strong></td><td>Economist. Pointed out that populations grow faster than resources, so most offspring die. This became Darwin's "struggle for existence."</td></tr>
+    <tr><td><strong>Artificial selection</strong> (breeders)</td><td>Humans breed dogs, pigeons, crops for desired traits. Darwin realized: if humans can do this, NATURE could too (by selecting which individuals survive to reproduce).</td></tr>
+  </table>
+
+  <h3>Natural selection — the mechanism</h3>
+  <p>Natural selection occurs whenever:</p>
+  <ol>
+    <li>More individuals are born than can survive (overproduction → struggle for existence).</li>
+    <li>Individuals VARY in heritable traits.</li>
+    <li>Those variations affect fitness — the ability to survive AND reproduce.</li>
+  </ol>
+  <p>The result: variations that increase fitness become more common over generations.</p>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    "Survival of the fittest" doesn't mean "the strongest." <strong>Fitness = reproductive success.</strong> A weak organism that has lots of offspring has HIGHER fitness than a strong one with none.
+  </div>
+
+  <h3>Evidence for evolution (memorize all 5)</h3>
+  <table>
+    <tr><th>Type of evidence</th><th>What it shows</th></tr>
+    <tr><td><strong>Biogeography</strong></td><td>The geographic distribution of species today reflects their evolutionary history (similar species in similar climates → common ancestors that adapted).</td></tr>
+    <tr><td><strong>Fossils</strong></td><td>Transitional forms (e.g., 20+ fossils tracing whales' evolution from a land animal) show step-by-step descent with modification.</td></tr>
+    <tr><td><strong>Homologous structures</strong></td><td>Same underlying anatomy, different functions (human arm, whale flipper, bat wing) — inherited from a common ancestor.</td></tr>
+    <tr><td><strong>Analogous structures</strong></td><td>Different anatomy, same function (bee wing vs. bat wing) — these are NOT evidence of common ancestry, they evolved independently. But they show how environments shape similar solutions.</td></tr>
+    <tr><td><strong>Vestigial structures</strong></td><td>Useless or barely-functional body parts inherited from ancestors (human appendix, whale pelvic bones).</td></tr>
+    <tr><td><strong>Embryology</strong></td><td>Early embryos of different vertebrates (fish, chickens, pigs, humans) look very similar — pharyngeal slits, tails — suggesting common ancestry.</td></tr>
+    <tr><td><strong>Molecular biology</strong></td><td>DNA + proteins are nearly identical in all life. The more similar two species' DNA (or cytochrome C, or hemoglobin), the more recently they share an ancestor.</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <span class="label">Watch out — the BIG vocab confusion</span><br>
+    <strong>Homologous = same anatomy, different function</strong> (evidence of common ancestry).<br>
+    <strong>Analogous = same function, different anatomy</strong> (evolved separately).<br>
+    Mixing these up is the most common evolution mistake on the test.
+  </div>
+
+  <h3>Sources of genetic variation</h3>
+  <ul>
+    <li><strong>Mutations</strong> — random DNA changes. Source of NEW alleles.</li>
+    <li><strong>Crossing over</strong> (Prophase I of meiosis) — shuffles existing alleles into new combinations.</li>
+    <li><strong>Independent assortment</strong> (Metaphase I of meiosis) — each pair of chromosomes lines up randomly.</li>
+    <li><strong>Sexual reproduction</strong> — random fertilization combines two unique gametes.</li>
+  </ul>
+
+  <h3>Three types of natural selection on polygenic traits</h3>
+  <table>
+    <tr><th>Type</th><th>Curve effect</th><th>Example</th></tr>
+    <tr><td><strong>Directional</strong></td><td>Curve SHIFTS toward one extreme</td><td>Antibiotic resistance in bacteria — only resistant strains survive, average resistance climbs over time</td></tr>
+    <tr><td><strong>Stabilizing</strong></td><td>Curve NARROWS around the average</td><td>Human birth weight — both very small AND very large babies have lower survival, so average wins</td></tr>
+    <tr><td><strong>Disruptive</strong></td><td>Curve SPLITS — both extremes favored, middle disfavored</td><td>Beak sizes during a drought when only very small seeds (small beaks) OR very hard seeds (huge beaks) are available</td></tr>
+  </table>
+
+  <h3>Genetic drift</h3>
+  <p><strong>Genetic drift</strong> = random changes in allele frequency, especially in small populations. Two flavors:</p>
+  <ul>
+    <li><strong>Bottleneck effect</strong> — population is drastically REDUCED (disaster, disease). The survivors carry only some of the original alleles, often by chance.</li>
+    <li><strong>Founder effect</strong> — a SMALL GROUP leaves the main population (e.g., colonizes an island). Their allele frequencies become the new population's baseline, regardless of what was true of the original population.</li>
+  </ul>
+
+  <h3>Speciation</h3>
+  <p>Speciation = formation of a new species. Requires <strong>reproductive isolation</strong> — populations can no longer interbreed. Three ways it happens:</p>
+  <ul>
+    <li><strong>Behavioral isolation</strong> — different courtship rituals (eastern vs. western meadowlark sing different songs).</li>
+    <li><strong>Geographic isolation</strong> — physical barrier (Kaibab vs. Abert's squirrels separated by the Grand Canyon).</li>
+    <li><strong>Temporal isolation</strong> — reproduce at different times (two flower species blooming in different months).</li>
+  </ul>
+
+  <h3>Cladograms / phylogenetic trees</h3>
+  <p>A <strong>cladogram</strong> is a branching diagram showing evolutionary relationships. Each <strong>node</strong> (branch point) = a common ancestor. Species closer together on the tree share more recent common ancestors.</p>
+  <p>To read one: trace down from any two species to find their common ancestor (the most recent shared node). The shorter the path between two species, the more closely related they are.</p>
+
+  <details class="quiz">
+    <summary>Check yourself: A bird and a bat both have wings. Are wings a homologous or analogous structure between them?</summary>
+    <div class="answer">ANALOGOUS — same function (flight), but different underlying anatomy. Birds evolved wings from feathered forelimbs; bats evolved wings from skin stretched between elongated fingers. They evolved independently. (However, if you compare a bat's wing bones to a human's arm bones — same bones, different function — those ARE homologous.)</div>
+  </details>
+
+  <details class="quiz">
+    <summary>Check yourself: A volcanic island is colonized by 10 birds blown off course in a storm. The new population has very different allele frequencies than the original. Which effect is this?</summary>
+    <div class="answer">FOUNDER effect — a small group started a new population, so its allele frequencies (by chance, not by selection) became the baseline for the new population.</div>
+  </details>
+</section>
+
+<!-- ============================================== -->
+<!-- TOPIC VI: ECOLOGY -->
+<!-- ============================================== -->
+<section id="topic-6">
+  <h2>VI. Ecology</h2>
+
+  <h3>Levels of biological organization</h3>
+  <p>From smallest to largest:</p>
+  <p style="text-align: center; font-weight: bold; font-size: 1.05rem;">Species → Population → Community → Ecosystem → Biome → Biosphere</p>
+  <table>
+    <tr><th>Level</th><th>What it is</th></tr>
+    <tr><td>Species</td><td>A group that can interbreed + produce fertile offspring.</td></tr>
+    <tr><td>Population</td><td>Members of one species in one area.</td></tr>
+    <tr><td>Community</td><td>All the different species/populations in one area.</td></tr>
+    <tr><td>Ecosystem</td><td>Community + abiotic environment (water, soil, climate).</td></tr>
+    <tr><td>Biome</td><td>A group of similar ecosystems (rainforest, desert, tundra).</td></tr>
+    <tr><td>Biosphere</td><td>All life on Earth + all places where life exists.</td></tr>
+  </table>
+
+  <h3>Biotic vs. Abiotic</h3>
+  <ul>
+    <li><strong>Biotic = living</strong> — plants, animals, fungi, bacteria, protists.</li>
+    <li><strong>Abiotic = non-living</strong> — water, sunlight, soil, temperature, air, minerals.</li>
+  </ul>
+
+  <h3>Producers vs. consumers</h3>
+  <table>
+    <tr><th>Type</th><th>How they get energy</th><th>Example</th></tr>
+    <tr><td><strong>Autotroph (Producer)</strong></td><td>Makes its own food. Either via photosynthesis (sunlight + CO₂ + H₂O → glucose + O₂) or chemosynthesis (chemicals at deep-sea vents).</td><td>Plants, algae, cyanobacteria</td></tr>
+    <tr><td><strong>Heterotroph (Consumer)</strong></td><td>Must eat other organisms.</td><td>Animals, fungi, most bacteria</td></tr>
+  </table>
+
+  <h4>Types of consumers</h4>
+  <ul>
+    <li><strong>Herbivore</strong> — eats plants only (cow, deer).</li>
+    <li><strong>Carnivore</strong> — eats animals only (lion, hawk).</li>
+    <li><strong>Omnivore</strong> — eats both (human, bear).</li>
+    <li><strong>Scavenger</strong> — eats already-dead animals (vulture).</li>
+    <li><strong>Decomposer</strong> — breaks down dead matter chemically (bacteria, fungi).</li>
+    <li><strong>Detritivore</strong> — eats small particles of decaying matter (earthworm).</li>
+  </ul>
+
+  <h3>Energy flow — the 10% rule</h3>
+  <p>Only about <strong>10% of the energy</strong> at one trophic level gets passed to the next. The other 90% is used by the organism (for movement, breathing, growth) or lost as heat.</p>
+  <p>That's why food chains rarely have more than 4–5 levels — there just isn't enough energy left.</p>
+
+  <p><strong>Producer (1000 units) → Primary consumer (100) → Secondary consumer (10) → Tertiary consumer (1)</strong></p>
+
+  <h3>Energy FLOWS, matter CYCLES</h3>
+  <ul>
+    <li><strong>Energy flows</strong> in one direction: Sun → producers → consumers → heat. Heat can't be reused.</li>
+    <li><strong>Matter cycles</strong>: carbon, water, nitrogen, phosphorus get reused over and over thanks to decomposers returning them to the environment. These are called <strong>biogeochemical cycles</strong>.</li>
+  </ul>
+
+  <h3>Habitat vs. Niche</h3>
+  <p><strong>Habitat = WHERE it lives</strong> ("address").<br>
+  <strong>Niche = its entire ROLE</strong> ("job") — what it eats, when it's active, what eats it, what it competes with, all the biotic + abiotic conditions it needs.</p>
+
+  <p><strong>Competitive exclusion principle:</strong> No two species can occupy exactly the same niche in the same habitat at the same time. One will out-compete the other.</p>
+
+  <h3>Symbiosis (3 types)</h3>
+  <table>
+    <tr><th>Type</th><th>Pattern</th><th>Example</th></tr>
+    <tr><td><strong>Mutualism</strong></td><td>+ / + (both benefit)</td><td>Bee + flower (pollen ↔ nectar)</td></tr>
+    <tr><td><strong>Commensalism</strong></td><td>+ / 0 (one benefits, other unaffected)</td><td>Barnacle on whale (free ride, no harm to whale)</td></tr>
+    <tr><td><strong>Parasitism</strong></td><td>+ / − (one benefits, other harmed)</td><td>Tapeworm in dog intestine</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    Predation (lion eats zebra) is <strong>not</strong> symbiosis — symbiosis means living TOGETHER long-term. A brief eat-and-leave interaction is just a predator-prey relationship.
+  </div>
+
+  <h3>Keystone &amp; invasive species</h3>
+  <ul>
+    <li><strong>Keystone species</strong> — disproportionately large effect on the community despite not being abundant. <em>Sea otters</em> control sea urchins → kelp forests survive. Remove otters → urchins explode → kelp dies → entire ecosystem collapses. That cascade is called a <strong>trophic cascade</strong>.</li>
+    <li><strong>Invasive species</strong> — non-native species that cause harm (cane toads in Australia, pythons in the Everglades).</li>
+  </ul>
+
+  <h3>Limiting factors &amp; carrying capacity</h3>
+  <ul>
+    <li><strong>Carrying capacity</strong> = the maximum population a given environment can sustainably support.</li>
+    <li><strong>Density-dependent factors</strong> get worse as population gets denser: competition, predation, parasitism, disease, herbivory.</li>
+    <li><strong>Density-independent factors</strong> affect populations regardless of density: weather extremes, natural disasters, fires, cold snaps.</li>
+  </ul>
+
+  <h3>Ecological succession</h3>
+  <table>
+    <tr><th></th><th>Primary</th><th>Secondary</th></tr>
+    <tr><td>Starts on</td><td>BARE rock — no soil</td><td>Existing soil after disturbance</td></tr>
+    <tr><td>Pioneer species</td><td>Lichens, mosses (build soil first)</td><td>Fast-growing grasses, weeds</td></tr>
+    <tr><td>Time scale</td><td>VERY slow (centuries+)</td><td>Faster (decades)</td></tr>
+    <tr><td>Example trigger</td><td>Volcanic eruption, glacier retreat</td><td>Wildfire, hurricane, abandoned farm</td></tr>
+  </table>
+  <p>Both end (eventually) in a <strong>climax community</strong> — a stable end state.</p>
+
+  <h3>Biomes — what determines them?</h3>
+  <p><strong>Temperature + precipitation</strong>. Knowing those two for a region tells you whether it's a desert, rainforest, tundra, etc. Big biomes to know: Tropical rainforest, Tropical dry forest, Tropical grassland/Savanna, Desert, Temperate grassland, Temperate woodland, Temperate forest, NW Coniferous forest, Boreal forest/Taiga, Tundra.</p>
+
+  <details class="quiz">
+    <summary>Check yourself: A factory in a town shuts down. The cleared land is left alone. What kind of succession happens, and what comes first?</summary>
+    <div class="answer">SECONDARY succession (the soil is intact). Fast-growing grasses and weeds come first as pioneer species. Eventually shrubs, then small trees, then a climax community.</div>
+  </details>
+
+  <details class="quiz">
+    <summary>Check yourself: Why is energy said to "flow" through an ecosystem while matter "cycles"?</summary>
+    <div class="answer">Energy is lost as HEAT at every trophic level (used for movement, breathing, etc.), and heat can't be reused — so energy moves in one direction only: sun → producers → consumers → heat. Matter (atoms like C, N, H, O) is never destroyed — decomposers return it to the environment for producers to use again.</div>
+  </details>
+</section>
+
+<!-- ============================================== -->
+<!-- TOPIC VII: HUMAN BODY -->
+<!-- ============================================== -->
+<section id="topic-7">
+  <h2>VII. The Human Body</h2>
+
+  <p>Three systems to know cold: <strong>Reproductive, Circulatory, Respiratory.</strong></p>
+
+  <h3>Reproductive System</h3>
+
+  <h4>Male anatomy — what does what?</h4>
+  <table>
+    <tr><th>Structure</th><th>Function</th></tr>
+    <tr><td>Testes</td><td>Produce sperm + testosterone. Located in scrotum (outside body) because sperm need cooler temp.</td></tr>
+    <tr><td>Scrotum</td><td>External sac holding the testes.</td></tr>
+    <tr><td>Vas deferens</td><td>Tube carrying sperm from testes to urethra.</td></tr>
+    <tr><td>Prostate</td><td>Gland that produces seminal fluid (nourishes sperm).</td></tr>
+    <tr><td>Urethra</td><td>In males: carries BOTH urine and semen out through the penis.</td></tr>
+    <tr><td>Penis</td><td>Delivers semen during intercourse.</td></tr>
+  </table>
+
+  <p><strong>Path of sperm:</strong> Testes → epididymis → vas deferens → (mixes with seminal fluid from prostate to form semen) → urethra → out.</p>
+
+  <h4>Female anatomy — what does what?</h4>
+  <table>
+    <tr><th>Structure</th><th>Function</th></tr>
+    <tr><td>Ovaries</td><td>Produce eggs + estrogen + progesterone. Each contains ~400,000 follicles at birth (only ~400 ever mature).</td></tr>
+    <tr><td>Fallopian tubes</td><td>Passageway from ovary to uterus. <strong>Site of fertilization.</strong></td></tr>
+    <tr><td>Uterus</td><td>Muscular organ where the embryo implants and develops.</td></tr>
+    <tr><td>Cervix</td><td>Lower opening of the uterus into the vagina; dilates during labor.</td></tr>
+    <tr><td>Vagina</td><td>Birth canal; entry for sperm during intercourse.</td></tr>
+    <tr><td>Placenta</td><td>(During pregnancy) Organ that transfers O₂ + nutrients from mom to baby and removes CO₂ + wastes.</td></tr>
+    <tr><td>Umbilical cord</td><td>Connects embryo/fetus to placenta.</td></tr>
+  </table>
+
+  <h4>The four hormones — and what each one does</h4>
+  <table>
+    <tr><th>Hormone</th><th>Made by</th><th>In males</th><th>In females</th></tr>
+    <tr><td><strong>FSH</strong> (Follicle Stim. Hormone)</td><td>Pituitary</td><td>Stimulates spermatogenesis</td><td>Matures the follicle in the ovary</td></tr>
+    <tr><td><strong>LH</strong> (Luteinizing Hormone)</td><td>Pituitary</td><td>Triggers testosterone production</td><td>Triggers ovulation (~day 14)</td></tr>
+    <tr><td><strong>Testosterone</strong></td><td>Testes</td><td>Sperm production + male 2° sex characteristics</td><td>–</td></tr>
+    <tr><td><strong>Estrogen</strong></td><td>Ovaries</td><td>–</td><td>Oogenesis + uterine lining growth + female 2° sex characteristics</td></tr>
+    <tr><td><strong>Progesterone</strong></td><td>Corpus luteum (ovary)</td><td>–</td><td>Thickens uterine lining; maintains it for implantation</td></tr>
+  </table>
+
+  <h4>The menstrual cycle (~28 days)</h4>
+  <ol>
+    <li><strong>Follicular phase</strong> (days 1–13): FSH triggers a follicle to mature; the egg inside develops; estrogen builds.</li>
+    <li><strong>Ovulation</strong> (~day 14): LH spikes → egg released from the ovary into the Fallopian tube.</li>
+    <li><strong>Luteal phase</strong> (days 15–28): The empty follicle becomes the corpus luteum and secretes progesterone, which builds up the uterine lining for possible implantation.</li>
+    <li><strong>Menstruation</strong>: If no fertilization, hormones drop, the uterine lining sheds — that's the period. Cycle restarts.</li>
+  </ol>
+
+  <div class="callout warn">
+    <span class="label">Watch out</span><br>
+    FSH and LH both come from the pituitary in BOTH sexes — but they do different things in each. Don't confuse "female hormones" and "male hormones" as separate sets — FSH and LH are universal; testosterone, estrogen, and progesterone are the sex-specific ones.
+  </div>
+
+  <h3>Circulatory System (Textbook 27.2)</h3>
+
+  <h4>Big picture</h4>
+  <ul>
+    <li><strong>Job:</strong> deliver O₂ and nutrients to cells; remove CO₂ and waste.</li>
+    <li><strong>Components:</strong> heart (pump), blood (transport medium), blood vessels (pipes).</li>
+  </ul>
+
+  <h4>The heart — four chambers</h4>
+  <table>
+    <tr><th>Chamber</th><th>Function</th><th>Blood type</th></tr>
+    <tr><td><strong>Right atrium</strong></td><td>Receives deoxygenated blood from the body (via the vena cavae)</td><td>Deoxygenated</td></tr>
+    <tr><td><strong>Right ventricle</strong></td><td>Pumps deoxygenated blood to the LUNGS (via pulmonary artery)</td><td>Deoxygenated</td></tr>
+    <tr><td><strong>Left atrium</strong></td><td>Receives oxygenated blood from the lungs (via pulmonary veins)</td><td>Oxygenated</td></tr>
+    <tr><td><strong>Left ventricle</strong></td><td>Pumps oxygenated blood to the ENTIRE BODY (via aorta) — strongest chamber</td><td>Oxygenated</td></tr>
+  </table>
+
+  <h4>Big rule for which side is which:</h4>
+  <p><strong>RIGHT side = Returns from body (DEOXYGENATED). LEFT side = Leaves toward body (OXYGENATED).</strong></p>
+
+  <h4>Blood flow (memorize this loop!)</h4>
+  <p><strong>Right atrium → tricuspid valve → right ventricle → pulmonary semilunar valve → pulmonary artery → LUNGS (gas exchange) → pulmonary veins → left atrium → bicuspid (mitral) valve → left ventricle → aortic semilunar valve → aorta → BODY → vena cavae → right atrium.</strong></p>
+
+  <h4>Pulmonary vs. Systemic circuit</h4>
+  <table>
+    <tr><th></th><th>Pulmonary circuit</th><th>Systemic circuit</th></tr>
+    <tr><td>Connects</td><td>Heart ↔ lungs</td><td>Heart ↔ rest of body</td></tr>
+    <tr><td>Starts at</td><td>Right ventricle</td><td>Left ventricle</td></tr>
+    <tr><td>Ends at</td><td>Left atrium</td><td>Right atrium</td></tr>
+    <tr><td>Purpose</td><td>Drop CO₂, pick up O₂</td><td>Drop O₂ + nutrients, pick up CO₂ + waste</td></tr>
+  </table>
+
+  <h4>Three types of blood vessels</h4>
+  <table>
+    <tr><th>Vessel</th><th>Direction</th><th>Structure</th></tr>
+    <tr><td><strong>Artery</strong></td><td>AWAY from heart</td><td>Thick muscular walls, high pressure (you feel your pulse on an artery)</td></tr>
+    <tr><td><strong>Vein</strong></td><td>TO the heart</td><td>Thinner walls, has VALVES to prevent backflow</td></tr>
+    <tr><td><strong>Capillary</strong></td><td>Connects arteries to veins</td><td>One cell thick — site of gas/nutrient exchange with tissues</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <span class="label">Watch out — Trick question alert</span><br>
+    "Artery" means AWAY from heart. "Vein" means TO heart. <strong>It has NOTHING to do with oxygen!</strong><br>
+    The pulmonary <em>artery</em> carries DEOXYGENATED blood (right ventricle → lungs).<br>
+    The pulmonary <em>vein</em> carries OXYGENATED blood (lungs → left atrium).<br>
+    Pulmonary = lung — and pulmonary circulation is the ONE exception where artery has low-O₂ and vein has high-O₂ blood.
+  </div>
+
+  <h4>Components of blood</h4>
+  <ul>
+    <li><strong>Plasma</strong> — liquid portion. Carries everything dissolved.</li>
+    <li><strong>Red blood cells</strong> — carry O₂ (using hemoglobin).</li>
+    <li><strong>White blood cells</strong> — fight infection.</li>
+    <li><strong>Platelets</strong> — clotting.</li>
+  </ul>
+
+  <h3>Respiratory System (Textbook 27.2)</h3>
+
+  <h4>Path of an oxygen molecule (memorize this in order!)</h4>
+  <p><strong>Nose/mouth → pharynx → larynx → trachea → bronchi → bronchioles → alveoli → diffuses across alveolar wall → capillary → red blood cell (hemoglobin).</strong></p>
+
+  <h4>Each part and what it does</h4>
+  <table>
+    <tr><th>Structure</th><th>Function</th></tr>
+    <tr><td>Nasal cavity</td><td>Warms, moistens, filters incoming air.</td></tr>
+    <tr><td>Pharynx</td><td>Throat — shared by air and food.</td></tr>
+    <tr><td>Epiglottis</td><td>Flap that COVERS the trachea when you swallow, so food doesn't go into your lungs.</td></tr>
+    <tr><td>Larynx</td><td>Voice box.</td></tr>
+    <tr><td>Trachea</td><td>Windpipe. Lined with cilia.</td></tr>
+    <tr><td>Bronchi</td><td>Two big tubes — one to each lung.</td></tr>
+    <tr><td>Bronchioles</td><td>Smaller branches inside the lungs.</td></tr>
+    <tr><td>Alveoli</td><td>Tiny grape-cluster sacs. <strong>SITE OF GAS EXCHANGE.</strong> Surrounded by capillaries.</td></tr>
+    <tr><td>Diaphragm</td><td>Dome muscle below the lungs. Contracts (flattens) to inhale, relaxes (domes up) to exhale.</td></tr>
+  </table>
+
+  <h4>Why alveoli are great at gas exchange</h4>
+  <ul>
+    <li>Huge total surface area (millions of them — tennis-court-sized when spread out).</li>
+    <li>Extremely thin walls (one cell thick) — short diffusion distance.</li>
+    <li>Surrounded by dense capillaries — always blood ready to load O₂ and drop off CO₂.</li>
+    <li>Moist surfaces — gases dissolve more easily.</li>
+  </ul>
+
+  <h4>Mucus + cilia in the airway</h4>
+  <p><strong>Mucus traps</strong> dust, pollen, microbes. <strong>Cilia sweep</strong> the trapped junk UP and out toward the throat (where you swallow or cough it). It's your respiratory tract's housekeeping crew.</p>
+
+  <h4>Nose vs. mouth breathing</h4>
+  <p>Nose is better — it filters, warms, and moistens the air. Mouth breathing skips all that and lets in cold, dry, unfiltered air.</p>
+
+  <h4>How breathing actually works (mechanics)</h4>
+  <ul>
+    <li><strong>Inhale</strong>: diaphragm contracts and pulls down → chest cavity expands → air pressure inside the lungs drops below atmospheric pressure → air rushes IN to equalize.</li>
+    <li><strong>Exhale</strong>: diaphragm relaxes and domes up → chest cavity shrinks → pressure inside rises → air pushes OUT.</li>
+    <li>Controlled by the <strong>medulla oblongata</strong> in the brainstem, which monitors CO₂ levels in your blood.</li>
+  </ul>
+
+  <details class="quiz">
+    <summary>Check yourself: A doctor says a patient has a "ventricular septal defect" — a hole in the septum between the two ventricles. What problem would this cause?</summary>
+    <div class="answer">Oxygenated blood from the left ventricle would mix with deoxygenated blood in the right ventricle. The blood pumped to the body would have less oxygen than it should, making the patient short of breath, tired, and unable to deliver enough oxygen to tissues.</div>
+  </details>
+
+  <details class="quiz">
+    <summary>Check yourself: Trace an oxygen molecule from inhaled air to a muscle cell in your finger.</summary>
+    <div class="answer">Nose → pharynx → larynx → trachea → bronchus → bronchiole → alveolus → diffuses across alveolar wall into capillary → loads onto hemoglobin in RBC → pulmonary vein → left atrium → bicuspid valve → left ventricle → aortic valve → aorta → arteries → arterioles → capillary near the finger muscle → diffuses out of RBC across capillary wall → into muscle cell.</div>
+  </details>
+
+  <details class="quiz">
+    <summary>Check yourself: A person inhales sharply through their nose. Describe what the diaphragm does and why air moves IN.</summary>
+    <div class="answer">The diaphragm CONTRACTS and flattens DOWNWARD. This expands the chest cavity → the air pressure inside the lungs drops below atmospheric pressure → air rushes IN through the nose to equalize the pressure.</div>
+  </details>
+
+</section>
+
+<footer>
+  Built for Chloe · Final exam Friday May 29, 2026 · You've got this.
+</footer>
+
+</div>
+</body>
+</html>

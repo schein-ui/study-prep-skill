@@ -1,0 +1,150 @@
+Central dogma	DNA → (transcription) → RNA → (translation) → Protein
+Transcription — where + enzyme	In the nucleus, by RNA polymerase
+Translation — where + organelle	In the cytoplasm, at the ribosome
+Promoter	DNA sequence where RNA polymerase binds to START transcription
+mRNA	Messenger RNA — carries the message from nucleus to ribosome
+tRNA	Transfer RNA — brings the right amino acid to the ribosome (has anticodon)
+rRNA	Ribosomal RNA — makes up the ribosome itself
+Codon	3-base mRNA sequence that codes for one amino acid
+Anticodon	3-base tRNA sequence that pairs with a codon
+Start codon	AUG (also codes for methionine / Met)
+Stop codons	UAA, UAG, UGA
+3 differences DNA vs RNA	DNA double / deoxyribose / T  vs  RNA single / ribose / U
+Silent mutation	Substitution where amino acid stays the same — no effect
+Missense mutation	Substitution that changes one amino acid
+Nonsense mutation	Substitution that creates a premature STOP codon
+Frameshift mutation	Insertion or deletion shifts the reading frame — usually devastating
+Differentiation	Process by which cells become specialized in structure and function
+Diploid (2n)	Cell with 2 sets of chromosomes — humans have 46 (23 pairs)
+Haploid (n)	Cell with 1 set of chromosomes — human gametes have 23
+Tetrad	4-chromatid structure formed in Prophase I from a homologous pair
+Crossing over	Exchange of segments between homologous chromatids during Prophase I
+Independent assortment	Random alignment of homologous pairs at Metaphase I → genetic variation
+Spermatogenesis	Makes 4 sperm per meiosis
+Oogenesis	Makes 1 egg + 3 polar bodies per meiosis
+Why halve chromosomes in meiosis?	So fertilization restores the correct diploid number (n + n = 2n)
+Why only 1 egg per meiosis?	All cytoplasm goes to the egg to support a future embryo
+Mitosis vs Meiosis (3 differences)	Mitosis = 1 round, 2 identical 2n cells, no crossing over | Meiosis = 2 rounds, 4 unique n cells, crossing over
+Gene	Segment of DNA that codes for a trait
+Allele	A version of a gene (e.g., purple allele or white allele)
+Homozygous	Two identical alleles (PP or pp)
+Heterozygous	Two different alleles (Pp) — also called hybrid
+Genotype	The genetic makeup — the letters (Pp)
+Phenotype	The physical trait you see (purple flowers)
+Mendel's Law of Segregation	The two alleles for a gene separate into different gametes
+Mendel's Law of Independent Assortment	Alleles for different genes sort into gametes independently
+Monohybrid heterozygous cross	Pp × Pp → 3:1 phenotype ratio, 1:2:1 genotype
+Dihybrid heterozygous cross	TtYy × TtYy → 9:3:3:1 phenotype ratio
+Incomplete dominance	Heterozygote shows BLENDED phenotype (red + white = pink)
+Codominance	Heterozygote shows BOTH phenotypes (AB blood type)
+Multiple alleles	A gene with more than 2 alleles in the population (blood: Iᴬ, Iᴮ, i)
+Polygenic trait	Trait controlled by multiple genes — gives a bell-curve distribution
+X-linked inheritance	Genes on X chromosome — recessive X-traits much more common in males
+Why colorblindness more in males?	Males XY have only 1 X — no second X to mask a recessive allele
+Karyotype	Picture of all chromosomes lined up — shows sex (XX vs XY) and abnormalities
+Autosomal	Any of the 22 non-sex chromosome pairs
+Evolution	Change in the heritable characteristics of a population over generations
+Natural selection	Individuals with traits suited to environment survive and reproduce more
+Fitness	Reproductive success — how many offspring you leave (NOT physical strength)
+Adaptation	Heritable trait that increases fitness in the environment
+Artificial selection	Humans breeding organisms for desired traits (dog breeds, crops)
+Homologous structures	Same anatomy, different function — evidence of common ancestry (human arm + bat wing)
+Analogous structures	Different anatomy, same function — evolved independently (bee wing + bat wing)
+Vestigial structures	Inherited body parts with little or no function (appendix, whale pelvic bones)
+Hutton & Lyell	Geologists — argued Earth is very OLD; gave Darwin enough time for evolution
+Lamarck	Proposed inheritance of acquired traits (mechanism wrong, but species do change)
+Malthus	Populations grow faster than resources → struggle for existence
+3 patterns of biodiversity (Darwin)	Species vary globally · vary locally · vary over time (fossils)
+Directional selection	One extreme favored — bell curve SHIFTS
+Stabilizing selection	Middle favored — bell curve NARROWS
+Disruptive selection	Both extremes favored — bell curve SPLITS
+Genetic drift	Random changes in allele frequency, esp. in small populations
+Bottleneck effect	Population drastically reduced — survivors carry only some alleles
+Founder effect	Small group starts new population — their alleles set the new baseline
+Speciation	Formation of a new species
+Reproductive isolation	Populations can no longer interbreed (required for speciation)
+Behavioral isolation	Different courtship rituals (meadowlark songs)
+Geographic isolation	Physical barrier (canyon separates squirrels)
+Temporal isolation	Reproduce at different times
+Cladogram	Branching diagram showing evolutionary relationships; nodes = common ancestors
+Biosphere	All life on Earth + everywhere life exists
+Biome	Group of ecosystems with similar climate (desert, tundra)
+Ecosystem	Community + abiotic environment
+Community	All populations of different species in one area
+Population	Members of one species in one area
+Species	Group that can interbreed and produce fertile offspring
+Niche	Full role of a species (where lives, what eats, how interacts) — its "job"
+Habitat	The physical place where a species lives — its "address"
+Abiotic	Non-living factors (water, sun, soil, temperature, air)
+Biotic	Living factors (plants, animals, fungi, bacteria)
+Autotroph	Makes own food via photosynthesis or chemosynthesis (producers)
+Heterotroph	Must eat other organisms (consumers)
+Herbivore	Eats only plants
+Carnivore	Eats only animals
+Omnivore	Eats both plants and animals
+Scavenger	Eats animals already dead (vulture)
+Decomposer	Chemically breaks down dead matter (bacteria, fungi)
+Detritivore	Eats small bits of decaying matter (worms)
+Food chain	Linear path of who eats whom
+Food web	Network of interconnected food chains
+Trophic level	One step in a food chain — producers are always level 1
+10% Rule	Only ~10% of energy passes from one trophic level to the next (rest = heat)
+Mutualism	+/+ relationship — both species benefit (bee + flower)
+Commensalism	+/0 relationship — one benefits, other unaffected (barnacle on whale)
+Parasitism	+/− relationship — one benefits, other harmed (tapeworm in dog)
+Competitive exclusion principle	No two species can occupy exactly the same niche in the same place
+Keystone species	Disproportionately large effect on community despite low abundance (sea otters)
+Invasive species	Non-native species causing harm (pythons in Everglades)
+Carrying capacity	Maximum population an environment can sustainably support
+Density-dependent factor	Limiting factor that strengthens with crowding (competition, disease, predation)
+Density-independent factor	Limiting factor that hits regardless of size (weather, natural disaster)
+Primary succession	Starts on bare rock — no soil (after volcano). Pioneer: lichens. Slow.
+Secondary succession	Starts where soil remains after a disturbance (after fire). Pioneer: grasses. Faster.
+Pioneer species	First species to colonize a barren area
+Climax community	Stable end state of succession
+Biogeochemical cycle	Cycle that moves matter through the biosphere (water, C, N, P)
+Why energy flows but matter cycles	Energy lost as heat at each step (1-way); matter recycled by decomposers
+Testes	Male gonads — produce sperm + testosterone (in scrotum, cooler than body)
+Vas deferens	Tube carrying sperm from testes to urethra
+Prostate	Gland producing seminal fluid (nourishes sperm)
+Urethra (male)	Carries BOTH urine and semen out through penis
+Ovaries	Female gonads — produce eggs + estrogen + progesterone
+Fallopian tubes	Passageway from ovary to uterus — SITE OF FERTILIZATION
+Uterus	Where the embryo implants and develops
+Cervix	Lower opening of uterus into vagina
+Placenta	Pregnancy organ — transfers O₂ + nutrients mom→baby, removes CO₂ + wastes
+Umbilical cord	Connects fetus to placenta
+FSH	From pituitary. Females: matures follicle. Males: stimulates sperm production.
+LH	From pituitary. Females: triggers ovulation (~day 14). Males: triggers testosterone.
+Estrogen	From ovaries — drives oogenesis, uterine lining, female 2° sex characteristics
+Progesterone	From corpus luteum — thickens uterine lining for implantation
+Testosterone	From testes — drives sperm + male 2° sex characteristics
+Menstrual cycle phases	Follicular → Ovulation (~day 14) → Luteal → Menstruation (if no fertilization)
+Right atrium	Receives DEOXYGENATED blood from body (via vena cavae)
+Right ventricle	Pumps DEOXYGENATED blood to lungs (via pulmonary artery)
+Left atrium	Receives OXYGENATED blood from lungs (via pulmonary veins)
+Left ventricle	Pumps OXYGENATED blood to entire body (via aorta) — strongest chamber
+Aorta	Largest artery — carries oxygenated blood from left ventricle to body
+Vena cavae	Largest veins — return deoxygenated blood from body to right atrium
+Pulmonary artery	Carries DEOXYGENATED blood from right ventricle to lungs (only artery to do so!)
+Pulmonary vein	Carries OXYGENATED blood from lungs to left atrium (only vein to do so!)
+Pulmonary circuit	Heart ↔ lungs (drops CO₂, picks up O₂)
+Systemic circuit	Heart ↔ body (drops O₂, picks up CO₂)
+Artery	Carries blood AWAY from heart — thick walls, high pressure
+Vein	Carries blood TO heart — thinner walls, has VALVES to prevent backflow
+Capillary	One cell thick — site of gas/nutrient exchange with tissues
+Plasma	Liquid part of blood — carries dissolved substances
+Red blood cells	Carry O₂ via hemoglobin
+White blood cells	Fight infection
+Platelets	Help blood clot
+Path of O₂ molecule	Nose → pharynx → larynx → trachea → bronchi → bronchioles → alveoli → capillary → hemoglobin
+Alveoli	Tiny sacs at end of bronchioles — SITE of gas exchange
+Why alveoli are great at gas exchange	Huge surface area, walls 1 cell thick, moist, dense capillary network
+Cilia + mucus role	Mucus traps junk, cilia sweep it UP and OUT toward throat
+Diaphragm role in inhaling	Contracts and flattens DOWN → expands chest → drops pressure → air IN
+Why breathe through nose better	Nose warms, moistens, filters air (mucus + cilia)
+Medulla oblongata	Brainstem region that controls breathing — monitors CO₂ levels
+Epiglottis	Flap covering trachea when you swallow (keeps food out of airway)
+Trachea	Windpipe — tube from larynx to bronchi, lined with cilia
+Bronchi	Two big tubes branching from trachea, one to each lung
+Bronchioles	Smaller branches off the bronchi

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f6f3f; }
+    .label { font-size: 13px; fill: #1c1c1c; }
+    .small { font-size: 11px; fill: #555; }
+    .step-box { fill: #d4ead7; stroke: #1f6f3f; stroke-width: 1.5; }
+    .arrow { stroke: #444; stroke-width: 2; fill: none; }
+    .alveoli-zoom { fill: #fbe5c8; stroke: #b1530a; stroke-width: 1.5; }
+  </style>
+  <text x="360" y="28" text-anchor="middle" class="title">Respiratory System — Path of an O₂ Molecule</text>
+
+  <defs>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#444"/>
+    </marker>
+  </defs>
+
+  <!-- Path boxes in flow -->
+  <g>
+    <rect x="40"  y="70" width="90" height="40" rx="6" class="step-box"/>
+    <text x="85" y="95" text-anchor="middle" class="label">Nose</text>
+
+    <line x1="130" y1="90" x2="155" y2="90" class="arrow" marker-end="url(#arrR)"/>
+
+    <rect x="155" y="70" width="90" height="40" rx="6" class="step-box"/>
+    <text x="200" y="95" text-anchor="middle" class="label">Pharynx</text>
+
+    <line x1="245" y1="90" x2="270" y2="90" class="arrow" marker-end="url(#arrR)"/>
+
+    <rect x="270" y="70" width="90" height="40" rx="6" class="step-box"/>
+    <text x="315" y="95" text-anchor="middle" class="label">Larynx</text>
+
+    <line x1="360" y1="90" x2="385" y2="90" class="arrow" marker-end="url(#arrR)"/>
+
+    <rect x="385" y="70" width="90" height="40" rx="6" class="step-box"/>
+    <text x="430" y="95" text-anchor="middle" class="label">Trachea</text>
+
+    <line x1="475" y1="90" x2="500" y2="90" class="arrow" marker-end="url(#arrR)"/>
+
+    <rect x="500" y="70" width="90" height="40" rx="6" class="step-box"/>
+    <text x="545" y="95" text-anchor="middle" class="label">Bronchi</text>
+
+    <line x1="590" y1="90" x2="615" y2="90" class="arrow" marker-end="url(#arrR)"/>
+
+    <rect x="615" y="70" width="90" height="40" rx="6" class="step-box"/>
+    <text x="660" y="95" text-anchor="middle" class="label">Bronchioles</text>
+  </g>
+
+  <!-- Arrow down to alveoli -->
+  <line x1="660" y1="110" x2="660" y2="155" class="arrow" marker-end="url(#arrR)"/>
+
+  <!-- Alveoli zoom -->
+  <g>
+    <rect x="220" y="160" width="280" height="170" rx="10" class="alveoli-zoom"/>
+    <text x="360" y="180" text-anchor="middle" class="label" font-weight="700" fill="#b1530a">ALVEOLI — gas exchange site</text>
+    <text x="360" y="200" text-anchor="middle" class="small">tiny grape-cluster sacs, walls 1 cell thick</text>
+
+    <!-- alveolus circles -->
+    <circle cx="290" cy="245" r="25" fill="#fff" stroke="#b1530a" stroke-width="1.5"/>
+    <circle cx="340" cy="262" r="20" fill="#fff" stroke="#b1530a" stroke-width="1.5"/>
+    <circle cx="380" cy="245" r="22" fill="#fff" stroke="#b1530a" stroke-width="1.5"/>
+    <circle cx="425" cy="265" r="18" fill="#fff" stroke="#b1530a" stroke-width="1.5"/>
+
+    <!-- capillary -->
+    <path d="M 240,290 Q 360,310 480,290" stroke="#c44a3f" stroke-width="3" fill="none"/>
+    <text x="360" y="324" text-anchor="middle" class="small">↑ capillary (blood with red blood cells)</text>
+
+    <!-- O2 arrows in -->
+    <text x="290" y="252" text-anchor="middle" font-size="14" fill="#1f6f3f" font-weight="700">O₂</text>
+    <line x1="290" y1="260" x2="290" y2="284" stroke="#1f6f3f" stroke-width="2" marker-end="url(#arrR)"/>
+
+    <!-- CO2 arrows out -->
+    <text x="425" y="252" text-anchor="middle" font-size="14" fill="#b1530a" font-weight="700">CO₂</text>
+    <line x1="425" y1="278" x2="425" y2="252" stroke="#b1530a" stroke-width="2" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- Notes -->
+  <text x="40" y="350" class="label" font-weight="700">Why alveoli are great:</text>
+  <text x="40" y="368" class="small">huge surface area · 1 cell thick walls · moist · surrounded by dense capillaries</text>
+</svg>

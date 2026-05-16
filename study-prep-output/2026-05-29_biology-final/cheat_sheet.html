@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chloe's Bio Final — Cheat Sheet (2 pages)</title>
+<style>
+  @page { size: letter; margin: 0.35in; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; color: #111; }
+  body { font-size: 8.2pt; line-height: 1.25; }
+  .page { width: 100%; page-break-after: always; padding: 0; }
+  .page:last-child { page-break-after: auto; }
+  h1 { font-size: 13pt; margin: 0 0 .15rem; color: #1f6f3f; text-align: center; }
+  .subhead { text-align: center; font-size: 8pt; color: #555; margin-bottom: .3rem; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .3rem; }
+  .box { border: 1px solid #888; border-radius: 4px; padding: .3rem .4rem; }
+  .box.tight { padding: .25rem .35rem; }
+  h2 { font-size: 8.6pt; margin: 0 0 .15rem; color: #1f6f3f; text-transform: uppercase; letter-spacing: .03em; border-bottom: 1px solid #c4d6c8; padding-bottom: 1px; }
+  h3 { font-size: 8pt; margin: .2rem 0 .05rem; color: #2a4d7a; }
+  ul { margin: .05rem 0 .15rem; padding-left: .9rem; }
+  ul li { margin-bottom: .04rem; }
+  table { border-collapse: collapse; width: 100%; margin: .1rem 0 .15rem; font-size: 7.6pt; }
+  th, td { border: 1px solid #aaa; padding: 1px 3px; text-align: left; vertical-align: top; }
+  th { background: #d4ead7; }
+  .warn { background: #fbe5c8; border-left: 2px solid #b1530a; padding: 2px 4px; margin: .15rem 0; font-size: 7.8pt; border-radius: 0 3px 3px 0; }
+  .warn::before { content: "⚠ "; font-weight: bold; color: #b1530a; }
+  .pill { display: inline-block; background: #1f6f3f; color: white; padding: 0px 5px; border-radius: 8px; font-size: 7pt; font-weight: 600; }
+  code { font-family: "SF Mono", "Menlo", Consolas, monospace; background: #f0ede4; padding: 0 2px; border-radius: 2px; font-size: 7.6pt; }
+  .arrow { font-weight: bold; }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page">
+<h1>Chloe's Biology Final — Cheat Sheet</h1>
+<div class="subhead">May 29, 2026 · 1–3 PM · North Gym · 15-min scan only · <strong>SKIP Hardy-Weinberg</strong></div>
+
+<div class="grid">
+
+  <!-- col 1 -->
+  <div>
+
+    <div class="box">
+      <h2>I. Sci. Method</h2>
+      <ul>
+        <li><strong>IV</strong> = what YOU change (X-axis)</li>
+        <li><strong>DV</strong> = what you MEASURE (Y-axis)</li>
+        <li><strong>Control</strong> = no-treatment group</li>
+        <li><strong>Constants</strong> = kept same across all groups</li>
+      </ul>
+      <strong>Graphs:</strong> bar = categories · line = time/trend · pie = parts of whole.<br>
+      <strong>Hypothesis:</strong> If ___, then ___ (testable!)
+    </div>
+
+    <div class="box" style="margin-top: .35rem;">
+      <h2>II. RNA &amp; Protein Synthesis</h2>
+      <span class="pill">CENTRAL DOGMA</span> DNA <span class="arrow">→</span> (transcription, nucleus) <span class="arrow">→</span> mRNA <span class="arrow">→</span> (translation, ribosome/cytoplasm) <span class="arrow">→</span> Protein
+      <h3>Transcription pairs (DNA template → mRNA)</h3>
+      A→<strong>U</strong> · T→A · G→C · C→G &nbsp;&nbsp;(RNA = uracil, not thymine!)
+      <h3>3 differences DNA vs RNA</h3>
+      DNA: double / deoxyribose / T · RNA: single / ribose / U
+      <h3>3 RNAs</h3>
+      <strong>mRNA</strong> = message · <strong>rRNA</strong> = ribosome · <strong>tRNA</strong> = amino-acid taxi (anticodon)
+      <h3>Codons</h3>
+      <strong>AUG</strong> = start (Met) · <strong>UAA / UAG / UGA</strong> = stop
+      <h3>Mutations</h3>
+      <table>
+        <tr><th>Type</th><th>Effect</th></tr>
+        <tr><td>Silent sub</td><td>Same amino acid → no change</td></tr>
+        <tr><td>Missense sub</td><td>1 amino acid changed</td></tr>
+        <tr><td>Nonsense sub</td><td>Premature STOP → short protein</td></tr>
+        <tr><td>Insertion/deletion</td><td>FRAMESHIFT → all downstream codons wrong</td></tr>
+      </table>
+      <div class="warn">Frameshift is usually worst — every codon after = gibberish.</div>
+    </div>
+
+    <div class="box" style="margin-top: .35rem;">
+      <h2>III. Meiosis</h2>
+      Human: body 2n=46, gametes n=23. Meiosis = 1 diploid <span class="arrow">→</span> 4 unique haploid.
+      <h3>Phases (memorize order!)</h3>
+      Prophase I (<strong>tetrads form, crossing over!</strong>) → Meta I (independent assortment) → Ana I (homologs split) → Telo I → <strong>NO interphase</strong> → Prophase II → Meta II → Ana II (sisters split) → Telo II = <strong>4 cells</strong>
+      <h3>Mitosis vs Meiosis</h3>
+      <table>
+        <tr><th></th><th>Mitosis</th><th>Meiosis</th></tr>
+        <tr><td>Cells</td><td>2 identical</td><td>4 unique</td></tr>
+        <tr><td>Rounds</td><td>1</td><td>2</td></tr>
+        <tr><td>Chromosomes</td><td>2n</td><td>n</td></tr>
+        <tr><td>Crossing over</td><td>No</td><td>Yes (Prophase I)</td></tr>
+      </table>
+      <h3>Spermato vs Oogenesis</h3>
+      Sperm: 4 sperm/meiosis · Egg: 1 ovum + 3 polar bodies (all cytoplasm → egg for embryo support)
+      <h3>3 sources of variation</h3>
+      Crossing over · Independent assortment · Random fertilization
+    </div>
+
+  </div>
+
+  <!-- col 2 -->
+  <div>
+
+    <div class="box">
+      <h2>IV. Genetics</h2>
+      <h3>Mendel's 3 laws</h3>
+      <strong>Dominance:</strong> one allele can mask another · <strong>Segregation:</strong> alleles split into separate gametes · <strong>Independent Assortment:</strong> different traits sort independently
+      <h3>Genotype letters</h3>
+      <table>
+        <tr><th>Pattern</th><th>What it is</th></tr>
+        <tr><td>PP</td><td>Homozygous dominant</td></tr>
+        <tr><td>Pp</td><td>Heterozygous (hybrid)</td></tr>
+        <tr><td>pp</td><td>Homozygous recessive</td></tr>
+      </table>
+      <h3>Classic ratios</h3>
+      Monohybrid het × het = <strong>3:1</strong> phenotypes (1:2:1 genotypes)<br>
+      Dihybrid het × het = <strong>9:3:3:1</strong> phenotypes<br>
+      Incomplete dominance het × het = <strong>1:2:1</strong> (e.g. red:pink:white)
+      <h3>Non-Mendelian</h3>
+      <ul>
+        <li><strong>Incomplete dom.</strong> = BLENDED (red + white = pink)</li>
+        <li><strong>Codominance</strong> = BOTH shown (AB blood, roan cattle)</li>
+        <li><strong>Multiple alleles</strong> = &gt;2 versions of a gene (blood: Iᴬ, Iᴮ, i)</li>
+        <li><strong>Polygenic</strong> = many genes, bell curve (height)</li>
+      </ul>
+      <h3>Blood type genotypes</h3>
+      A = Iᴬ Iᴬ or Iᴬi · B = Iᴮ Iᴮ or Iᴮi · AB = Iᴬ Iᴮ · O = ii
+      <h3>X-linked</h3>
+      Recessive X-trait far more common in <strong>males</strong> (only 1 X → no backup). Color-blindness: ~1/12 males, ~1/200 females.
+      <h3>Karyotype</h3>
+      Picture of all chromosomes. XX = ♀, XY = ♂. Detects trisomy (e.g. Down = trisomy 21).
+      <div class="warn">Incomplete dom = BLENDED; Codom = BOTH AT ONCE.</div>
+    </div>
+
+    <div class="box" style="margin-top: .35rem;">
+      <h2>V. Evolution</h2>
+      <h3>Natural selection requires:</h3>
+      <ul>
+        <li>Overproduction (more born than survive)</li>
+        <li>Heritable variation</li>
+        <li>Variation affects fitness (= reproductive success, NOT strength)</li>
+      </ul>
+      <h3>Evidence (memorize 5+)</h3>
+      Biogeography · Fossils · Homologous · Vestigial · Embryology · Molecular (DNA, cytochrome C)
+      <div class="warn"><strong>Homologous</strong> = same structure, diff function (common ancestor!). <strong>Analogous</strong> = diff structure, same function (independent evolution).</div>
+      <h3>3 types of selection</h3>
+      <strong>Directional</strong> = curve shifts · <strong>Stabilizing</strong> = curve narrows · <strong>Disruptive</strong> = curve splits
+      <h3>Genetic drift</h3>
+      <strong>Bottleneck</strong> = population crashes · <strong>Founder</strong> = small group starts new pop
+      <h3>3 reproductive isolations</h3>
+      <strong>Behavioral</strong> (meadowlark songs) · <strong>Geographic</strong> (canyon) · <strong>Temporal</strong> (different times)
+      <h3>Cladogram</h3>
+      Branch points = common ancestors. Closer = more related.
+    </div>
+
+  </div>
+
+</div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+<h1>Cheat Sheet — Page 2</h1>
+<div class="subhead">VI. Ecology &nbsp;·&nbsp; VII. Human Body</div>
+
+<div class="grid">
+
+  <!-- col 1 -->
+  <div>
+
+    <div class="box">
+      <h2>VI. Ecology</h2>
+      <h3>Levels of organization</h3>
+      Species <span class="arrow">→</span> Population <span class="arrow">→</span> Community <span class="arrow">→</span> Ecosystem <span class="arrow">→</span> Biome <span class="arrow">→</span> Biosphere
+      <h3>Biotic vs Abiotic</h3>
+      Biotic = living · Abiotic = water, sun, soil, temp
+      <h3>Producers vs Consumers</h3>
+      <strong>Autotroph</strong> = makes own food (plants, photosynthesis) · <strong>Heterotroph</strong> = eats others (animals, fungi)
+      <h3>Consumer types</h3>
+      Herbivore · Carnivore · Omnivore · Scavenger (vulture) · Decomposer (breaks down → detritus) · Detritivore (eats detritus)
+      <h3>10% Rule</h3>
+      Only ~10% of energy passes to next trophic level (rest = heat, metabolism). Limits chains to 4-5 levels.
+      <h3>Energy vs matter</h3>
+      Energy <strong>FLOWS</strong> (one way, lost as heat) · Matter <strong>CYCLES</strong> (carbon, water, nitrogen — biogeochem cycles)
+      <h3>Habitat vs Niche</h3>
+      Habitat = address (WHERE) · Niche = job (ROLE) ·
+      <strong>Competitive exclusion:</strong> no 2 species share same niche
+      <h3>3 symbioses</h3>
+      <table>
+        <tr><td>Mutualism</td><td>+/+</td><td>Bee + flower</td></tr>
+        <tr><td>Commensalism</td><td>+/0</td><td>Barnacle on whale</td></tr>
+        <tr><td>Parasitism</td><td>+/−</td><td>Tapeworm in dog</td></tr>
+      </table>
+      <div class="warn">Predation ≠ symbiosis (it's not long-term living together).</div>
+      <h3>Limiting factors</h3>
+      <strong>Density-dependent</strong> = stronger when crowded (competition, disease, predation) · <strong>Density-indep.</strong> = hits regardless (weather, disasters)
+      <h3>Succession</h3>
+      <table>
+        <tr><th></th><th>Primary</th><th>Secondary</th></tr>
+        <tr><td>Starts</td><td>Bare rock, no soil</td><td>Soil intact</td></tr>
+        <tr><td>Pioneers</td><td>Lichens, mosses</td><td>Grasses, weeds</td></tr>
+        <tr><td>Speed</td><td>Slow (centuries)</td><td>Faster (decades)</td></tr>
+        <tr><td>Trigger</td><td>Volcano, glacier</td><td>Fire, hurricane, farm</td></tr>
+      </table>
+      End state = <strong>climax community</strong>
+      <h3>Keystone &amp; Invasive</h3>
+      Keystone = big effect, not abundant (sea otters!) · Invasive = non-native, harmful
+      <h3>Biome</h3>
+      Determined by <strong>temperature + precipitation</strong>
+    </div>
+
+  </div>
+
+  <!-- col 2 -->
+  <div>
+
+    <div class="box">
+      <h2>VII. Reproductive System</h2>
+      <h3>Male</h3>
+      Testes (sperm + testosterone, in scrotum = cooler) → vas deferens → prostate adds seminal fluid → urethra → out
+      <h3>Female</h3>
+      Ovaries (eggs + estrogen) → fallopian tubes (<strong>fertilization here</strong>) → uterus (implantation) → cervix → vagina
+      <h3>4 hormones</h3>
+      <table>
+        <tr><th>Hormone</th><th>Females</th><th>Males</th></tr>
+        <tr><td><strong>FSH</strong> (pit)</td><td>Matures follicle</td><td>Spermatogenesis</td></tr>
+        <tr><td><strong>LH</strong> (pit)</td><td>Triggers ovulation</td><td>Triggers testosterone</td></tr>
+        <tr><td>Estrogen</td><td>Oogenesis + uterine lining</td><td>—</td></tr>
+        <tr><td>Progesterone</td><td>Thickens uterine lining</td><td>—</td></tr>
+        <tr><td>Testosterone</td><td>—</td><td>Sperm + 2° sex char.</td></tr>
+      </table>
+      <h3>Menstrual cycle (~28 days)</h3>
+      Follicular → <strong>Ovulation (~day 14)</strong> → Luteal → Menstruation (if no fertilization)
+      <h3>Pregnancy structures</h3>
+      Placenta (mom↔baby transfer) · Umbilical cord (connects to placenta) · Amniotic sac (protects)
+    </div>
+
+    <div class="box" style="margin-top: .35rem;">
+      <h2>VII. Circulatory</h2>
+      <h3>4 chambers (key rule)</h3>
+      <strong>RIGHT = deoxygenated (to lungs). LEFT = oxygenated (to body).</strong>
+      <table>
+        <tr><th>Chamber</th><th>Does what</th></tr>
+        <tr><td>R atrium</td><td>← body (via vena cavae), deox</td></tr>
+        <tr><td>R ventricle</td><td>→ lungs (pulm. artery)</td></tr>
+        <tr><td>L atrium</td><td>← lungs (pulm. veins), ox</td></tr>
+        <tr><td>L ventricle</td><td>→ body (aorta) — strongest!</td></tr>
+      </table>
+      <h3>Blood flow loop</h3>
+      R atrium → tricuspid → R ventricle → pulm. semilunar → pulm. artery → <strong>LUNGS</strong> → pulm. veins → L atrium → bicuspid → L ventricle → aortic SL → aorta → <strong>BODY</strong> → vena cavae → R atrium
+      <h3>2 circuits</h3>
+      <strong>Pulmonary</strong> = heart↔lungs · <strong>Systemic</strong> = heart↔body
+      <h3>Vessels</h3>
+      <strong>Artery</strong> = AWAY from heart (thick, pulse) · <strong>Vein</strong> = TO heart (valves) · <strong>Capillary</strong> = exchange (1 cell thick)
+      <div class="warn">Pulmonary <em>artery</em> = DEOXYGENATED! Pulmonary <em>vein</em> = oxygenated. Artery/vein = direction (away/to), not oxygen!</div>
+      <h3>Blood parts</h3>
+      Plasma · RBC (hemoglobin → O₂) · WBC (immunity) · Platelets (clot)
+    </div>
+
+    <div class="box" style="margin-top: .35rem;">
+      <h2>VII. Respiratory</h2>
+      <h3>Path of O₂ (memorize!)</h3>
+      Nose → pharynx → larynx → trachea → bronchi → bronchioles → <strong>alveoli</strong> (gas exchange!) → capillary → hemoglobin
+      <h3>Why alveoli rock</h3>
+      Huge surface area · 1 cell thick · moist · dense capillaries
+      <h3>Cilia + mucus</h3>
+      Mucus traps junk, cilia sweep it OUT toward throat
+      <h3>Breathing mechanics</h3>
+      Inhale = diaphragm <strong>contracts down</strong> → chest expands → pressure drops → air IN<br>
+      Exhale = diaphragm relaxes up → pressure rises → air OUT<br>
+      Controlled by <strong>medulla oblongata</strong>, monitors CO₂
+      <h3>Nose &gt; mouth breathing</h3>
+      Nose warms, moistens, filters air. Mouth skips it.
+    </div>
+
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

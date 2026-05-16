@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f6f3f; }
+    .label { font-size: 13px; fill: #1c1c1c; }
+    .lvl-label { font-size: 13px; font-weight: 700; fill: #fff; }
+    .num { font-size: 14px; font-weight: 700; fill: #fff; }
+    .note { font-size: 12px; fill: #b1530a; }
+    .axis-label { font-size: 11px; fill: #666; font-style: italic; }
+  </style>
+  <text x="360" y="28" text-anchor="middle" class="title">Energy Pyramid &amp; the 10% Rule</text>
+  <text x="360" y="48" text-anchor="middle" class="label">Only ~10% of energy passes from one trophic level to the next.</text>
+
+  <!-- Pyramid levels -->
+  <!-- Level 1 -->
+  <polygon points="60,360 660,360 660,310 60,310" fill="#1f6f3f"/>
+  <text x="360" y="343" text-anchor="middle" class="lvl-label">Primary Producers (plants, algae)</text>
+  <text x="690" y="343" text-anchor="end" class="num">10,000 units</text>
+  <text x="20" y="343" text-anchor="start" class="num">Lvl 1</text>
+
+  <!-- Level 2 -->
+  <polygon points="120,310 600,310 600,260 120,260" fill="#2e8a52"/>
+  <text x="360" y="293" text-anchor="middle" class="lvl-label">Primary Consumers (herbivores: deer, grasshoppers)</text>
+  <text x="630" y="293" text-anchor="end" class="num">1,000</text>
+  <text x="80" y="293" text-anchor="start" class="num">Lvl 2</text>
+
+  <!-- Level 3 -->
+  <polygon points="180,260 540,260 540,210 180,210" fill="#4ea870"/>
+  <text x="360" y="243" text-anchor="middle" class="lvl-label">Secondary Consumers (carnivores: fox, snake)</text>
+  <text x="570" y="243" text-anchor="end" class="num">100</text>
+  <text x="140" y="243" text-anchor="start" class="num">Lvl 3</text>
+
+  <!-- Level 4 -->
+  <polygon points="240,210 480,210 480,160 240,160" fill="#7ec396"/>
+  <text x="360" y="193" text-anchor="middle" class="lvl-label">Tertiary Consumers (hawk, big carnivore)</text>
+  <text x="510" y="193" text-anchor="end" class="num">10</text>
+  <text x="200" y="193" text-anchor="start" class="num">Lvl 4</text>
+
+  <!-- Apex -->
+  <polygon points="300,160 420,160 420,110 300,110" fill="#a8d6b9"/>
+  <text x="360" y="142" text-anchor="middle" class="label">Top predator</text>
+  <text x="450" y="142" text-anchor="end" class="num">1</text>
+
+  <!-- Heat-loss arrows -->
+  <g stroke="#b1530a" stroke-width="2" fill="none">
+    <path d="M 660,335 Q 695,335 695,295" marker-end="url(#hh)"/>
+    <path d="M 600,285 Q 645,285 645,245" marker-end="url(#hh)"/>
+    <path d="M 540,235 Q 585,235 585,195" marker-end="url(#hh)"/>
+    <path d="M 480,185 Q 525,185 525,145" marker-end="url(#hh)"/>
+  </g>
+  <defs>
+    <marker id="hh" markerWidth="8" markerHeight="8" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#b1530a"/>
+    </marker>
+  </defs>
+
+  <text x="710" y="200" text-anchor="end" class="note">↑ 90% lost as</text>
+  <text x="710" y="216" text-anchor="end" class="note">HEAT &amp; activity</text>
+
+  <!-- Bottom note -->
+  <text x="60" y="395" class="label" font-weight="700">Why?</text>
+  <text x="60" y="411" class="label">Each level uses most of its energy for breathing, moving, growing. Only ~10% is stored as body mass that the next level can eat.</text>
+</svg>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f6f3f; }
+    .label { font-size: 12px; fill: #1c1c1c; }
+    .chamber { font-size: 13px; font-weight: 700; }
+    .vessel { font-size: 11px; }
+    .deox { fill: #5680b3; }
+    .ox { fill: #c44a3f; }
+    .deox-stroke { stroke: #5680b3; stroke-width: 2; fill: none; }
+    .ox-stroke { stroke: #c44a3f; stroke-width: 2; fill: none; }
+    .chamber-box { stroke: #444; stroke-width: 1.5; }
+    .deox-fill { fill: #cfdbef; }
+    .ox-fill { fill: #fbd9d4; }
+    .legend-box { stroke: #888; fill: #fdfbf3; }
+  </style>
+  <text x="360" y="26" text-anchor="middle" class="title">Heart Anatomy &amp; Blood Flow</text>
+  <text x="360" y="46" text-anchor="middle" class="label">RIGHT side = deoxygenated (to lungs) · LEFT side = oxygenated (to body)</text>
+
+  <!-- HEART -->
+  <!-- right side -->
+  <rect x="240" y="110" width="110" height="80" class="chamber-box deox-fill"/>
+  <text x="295" y="148" text-anchor="middle" class="chamber deox">Right Atrium</text>
+  <text x="295" y="166" text-anchor="middle" class="label">deoxygenated</text>
+
+  <rect x="240" y="200" width="110" height="120" class="chamber-box deox-fill"/>
+  <text x="295" y="250" text-anchor="middle" class="chamber deox">Right Ventricle</text>
+  <text x="295" y="268" text-anchor="middle" class="label">deoxygenated</text>
+  <text x="295" y="288" text-anchor="middle" class="label">(thinner wall)</text>
+
+  <!-- left side -->
+  <rect x="370" y="110" width="110" height="80" class="chamber-box ox-fill"/>
+  <text x="425" y="148" text-anchor="middle" class="chamber ox">Left Atrium</text>
+  <text x="425" y="166" text-anchor="middle" class="label">oxygenated</text>
+
+  <rect x="370" y="200" width="110" height="120" class="chamber-box ox-fill"/>
+  <text x="425" y="245" text-anchor="middle" class="chamber ox">Left Ventricle</text>
+  <text x="425" y="263" text-anchor="middle" class="label">oxygenated</text>
+  <text x="425" y="283" text-anchor="middle" class="label">THICKEST wall</text>
+  <text x="425" y="303" text-anchor="middle" class="label">(pumps to body)</text>
+
+  <!-- valves between atria and ventricles -->
+  <line x1="245" y1="195" x2="345" y2="195" stroke="#444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="295" y="207" text-anchor="middle" class="vessel" fill="#666">tricuspid valve</text>
+  <line x1="375" y1="195" x2="475" y2="195" stroke="#444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="425" y="207" text-anchor="middle" class="vessel" fill="#666">bicuspid valve</text>
+
+  <!-- septum -->
+  <line x1="360" y1="110" x2="360" y2="320" stroke="#222" stroke-width="3"/>
+  <text x="360" y="335" text-anchor="middle" class="vessel" fill="#444">septum</text>
+
+  <!-- vena cavae INTO right atrium -->
+  <path d="M 80,130 Q 160,130 240,140" class="deox-stroke"/>
+  <text x="80" y="120" class="vessel deox">Superior vena cava</text>
+  <text x="80" y="135" class="vessel deox">(from upper body)</text>
+  <path d="M 80,180 Q 160,180 240,170" class="deox-stroke"/>
+  <text x="80" y="195" class="vessel deox">Inferior vena cava</text>
+  <text x="80" y="210" class="vessel deox">(from lower body)</text>
+
+  <!-- pulmonary artery OUT of right ventricle -->
+  <path d="M 295,200 Q 295,80 360,75" class="deox-stroke" stroke-dasharray="0" stroke-width="2.5"/>
+  <polygon points="357,72 367,75 357,78" class="deox"/>
+  <text x="200" y="65" class="vessel deox">Pulmonary artery → LUNGS</text>
+  <text x="200" y="80" class="vessel deox" font-style="italic">(only artery with deoxygenated blood!)</text>
+
+  <!-- pulmonary veins INTO left atrium -->
+  <path d="M 540,75 Q 425,80 425,110" class="ox-stroke"/>
+  <text x="500" y="100" class="vessel ox">← Pulmonary veins</text>
+  <text x="500" y="115" class="vessel ox" font-style="italic">(only veins with</text>
+  <text x="500" y="130" class="vessel ox" font-style="italic">oxygenated blood!)</text>
+
+  <!-- aorta OUT of left ventricle -->
+  <path d="M 425,200 Q 425,90 540,90" fill="none" stroke="none"/>
+  <path d="M 480,260 Q 600,200 600,130" class="ox-stroke" stroke-width="3"/>
+  <polygon points="597,127 603,135 605,127" class="ox"/>
+  <text x="555" y="280" class="vessel ox">Aorta → BODY</text>
+  <text x="555" y="295" class="vessel ox">(largest artery)</text>
+
+  <!-- flow order steps -->
+  <rect x="40" y="360" width="640" height="80" rx="8" class="legend-box"/>
+  <text x="55" y="380" class="label" font-weight="700">Blood flow loop (memorize!):</text>
+  <text x="55" y="402" class="label">Right atrium → tricuspid → Right ventricle → pulm. artery → <tspan class="deox" font-weight="700">LUNGS</tspan> (drops CO₂, picks up O₂)</text>
+  <text x="55" y="420" class="label">→ pulm. veins → Left atrium → bicuspid → Left ventricle → aorta → <tspan class="ox" font-weight="700">BODY</tspan> (drops O₂, picks up CO₂)</text>
+  <text x="55" y="436" class="label">→ vena cavae → back to right atrium. ▶ loop complete</text>
+</svg>
