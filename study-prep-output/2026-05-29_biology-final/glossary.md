@@ -192,6 +192,9 @@ Every term the teacher listed on the review guide, with a short definition + a o
 | **Testes** | Male gonads (in the scrotum). Produce sperm + testosterone. |
 | **Scrotum** | External sac that holds the testes outside the body (keeps them cooler). |
 | **Penis** | Male organ that delivers sperm; also passes urine. |
+| **Epididymis** | Coiled tube on each testis where sperm mature after being made. Sperm pass through this on the way to the vas deferens. |
+| **Seminiferous tubules** | Tubes inside the testes where sperm are actually produced. |
+| **Seminal vesicle** | Gland that adds nutrient-rich fluid to sperm (along with the prostate) to make semen. |
 | **Vas deferens** | Tube that carries sperm from the testes to the urethra. |
 | **Prostate** | Gland that produces seminal fluid (nourishes sperm). |
 | **Urethra** | In males: carries BOTH urine and semen out of the body. |
@@ -202,6 +205,8 @@ Every term the teacher listed on the review guide, with a short definition + a o
 | **Vagina** | The birth canal; also where the penis enters during intercourse. |
 | **Placenta** | Organ that develops during pregnancy; transfers nutrients + O₂ from mother to fetus, removes CO₂ + waste. |
 | **Umbilical cord** | Connects the embryo/fetus to the placenta. |
+| **Amniotic sac** | Protective bubble that surrounds the fetus inside the uterus. |
+| **Amniotic fluid** | Clear yellowish fluid (98% water) inside the amniotic sac that cushions and protects the fetus. |
 | **Testosterone** | Main male sex hormone — produced in testes. Drives sperm production + secondary sex characteristics. |
 | **Estrogen** | Female sex hormone — produced in ovaries. Controls oogenesis + uterine lining + secondary sex characteristics. |
 | **Progesterone** | Female sex hormone from the corpus luteum. Thickens the uterine lining for implantation. |
@@ -223,6 +228,8 @@ Every term the teacher listed on the review guide, with a short definition + a o
 | **Superior vena cava** | Large vein returning deoxygenated blood from the upper body to the right atrium. |
 | **Inferior vena cava** | Large vein returning deoxygenated blood from the lower body to the right atrium. |
 | **Aorta** | The largest artery — carries oxygenated blood from the left ventricle to the whole body. |
+| **Aortic arch** | The curve at the top of the aorta where it bends to head down through the body. (Specifically labeled on the teacher's heart diagram.) |
+| **Pulmonary trunk** | The single big vessel coming out of the right ventricle that splits into the right and left pulmonary arteries. |
 | **Artery** | Carries blood AWAY from the heart. Thick, muscular walls. High pressure. |
 | **Vein** | Carries blood TO the heart. Thinner walls. Has valves to prevent backflow. |
 | **Capillary** | Tiny vessel (one cell thick) — site of gas/nutrient exchange with tissues. |

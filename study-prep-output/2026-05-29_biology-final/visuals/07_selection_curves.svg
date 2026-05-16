@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f6f3f; }
+    .ct { font-size: 14px; font-weight: 700; fill: #2a4d7a; }
+    .label { font-size: 11px; fill: #1c1c1c; }
+    .ax { stroke: #444; stroke-width: 1.5; }
+    .before { fill: none; stroke: #888; stroke-width: 2; stroke-dasharray: 4,3; }
+    .after { fill: none; stroke: #c44a3f; stroke-width: 2.5; }
+    .legend-box { fill: #fdfbf3; stroke: #aaa; }
+    .note { font-size: 11px; fill: #b1530a; font-style: italic; }
+  </style>
+  <text x="380" y="26" text-anchor="middle" class="title">Three Types of Natural Selection on Polygenic Traits</text>
+  <text x="380" y="45" text-anchor="middle" class="label">Dashed = original population · Red = after selection</text>
+
+  <!-- DIRECTIONAL -->
+  <g transform="translate(20, 70)">
+    <text x="120" y="0" text-anchor="middle" class="ct">Directional</text>
+    <text x="120" y="18" text-anchor="middle" class="label">One extreme favored → curve SHIFTS</text>
+    <!-- axes -->
+    <line x1="20" y1="200" x2="220" y2="200" class="ax"/>
+    <line x1="20" y1="200" x2="20" y2="50" class="ax"/>
+    <text x="120" y="225" text-anchor="middle" class="label">trait value →</text>
+    <!-- before curve, centered at x=120 -->
+    <path d="M 30,200 Q 70,200 90,160 Q 110,80 130,80 Q 150,80 170,160 Q 195,200 215,200" class="before"/>
+    <!-- after curve, shifted right -->
+    <path d="M 50,200 Q 90,200 110,160 Q 130,80 150,80 Q 170,80 190,160 Q 215,200 215,200" class="after"/>
+    <!-- arrow -->
+    <line x1="105" y1="120" x2="160" y2="120" stroke="#1f6f3f" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="200" y="80" text-anchor="middle" class="note">Ex: antibiotic-resistant bacteria,</text>
+    <text x="200" y="94" text-anchor="middle" class="note">peppered moths in soot era</text>
+  </g>
+
+  <!-- STABILIZING -->
+  <g transform="translate(270, 70)">
+    <text x="120" y="0" text-anchor="middle" class="ct">Stabilizing</text>
+    <text x="120" y="18" text-anchor="middle" class="label">Middle favored → curve NARROWS</text>
+    <line x1="20" y1="200" x2="220" y2="200" class="ax"/>
+    <line x1="20" y1="200" x2="20" y2="50" class="ax"/>
+    <text x="120" y="225" text-anchor="middle" class="label">trait value →</text>
+    <!-- before (wide low curve) -->
+    <path d="M 30,200 Q 60,200 85,140 Q 105,110 125,110 Q 145,110 165,140 Q 190,200 220,200" class="before"/>
+    <!-- after (narrow tall curve, same center) -->
+    <path d="M 60,200 Q 90,200 105,140 Q 120,60 125,60 Q 130,60 145,140 Q 160,200 190,200" class="after"/>
+    <text x="120" y="55" text-anchor="middle" class="note">narrower &amp; taller</text>
+    <text x="120" y="265" text-anchor="middle" class="note">Ex: human birth weight</text>
+  </g>
+
+  <!-- DISRUPTIVE -->
+  <g transform="translate(520, 70)">
+    <text x="120" y="0" text-anchor="middle" class="ct">Disruptive</text>
+    <text x="120" y="18" text-anchor="middle" class="label">Both extremes favored → curve SPLITS</text>
+    <line x1="20" y1="200" x2="220" y2="200" class="ax"/>
+    <line x1="20" y1="200" x2="20" y2="50" class="ax"/>
+    <text x="120" y="225" text-anchor="middle" class="label">trait value →</text>
+    <!-- before (single curve, center) -->
+    <path d="M 30,200 Q 70,200 90,160 Q 110,80 130,80 Q 150,80 170,160 Q 195,200 215,200" class="before"/>
+    <!-- after (two peaks) -->
+    <path d="M 30,200 Q 50,200 60,150 Q 70,90 80,90 Q 90,90 100,150 Q 110,200 125,200 Q 140,200 150,150 Q 160,90 170,90 Q 180,90 190,150 Q 200,200 215,200" class="after"/>
+    <text x="120" y="265" text-anchor="middle" class="note">Ex: beak size in drought —</text>
+    <text x="120" y="280" text-anchor="middle" class="note">only big or tiny beaks fit available seeds</text>
+  </g>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#1f6f3f"/>
+    </marker>
+  </defs>
+
+  <!-- key -->
+  <rect x="280" y="320" width="200" height="30" rx="4" class="legend-box"/>
+  <line x1="295" y1="334" x2="320" y2="334" class="before"/>
+  <text x="324" y="338" class="label">original</text>
+  <line x1="380" y1="334" x2="405" y2="334" class="after"/>
+  <text x="409" y="338" class="label">after selection</text>
+</svg>

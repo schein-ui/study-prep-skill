@@ -844,6 +844,11 @@ Phenotype ratio: 3 purple : 1 white</pre>
   <p>A <strong>cladogram</strong> is a branching diagram showing evolutionary relationships. Each <strong>node</strong> (branch point) = a common ancestor. Species closer together on the tree share more recent common ancestors.</p>
   <p>To read one: trace down from any two species to find their common ancestor (the most recent shared node). The shorter the path between two species, the more closely related they are.</p>
 
+  <div class="callout tip">
+    <span class="label">Reading tip</span><br>
+    Don't be fooled by the order of species along the bottom — that's just how the artist drew it. What matters is the <strong>nodes</strong>: which species share a node closest to the tips. Two species that branch off from the SAME recent node are most related.
+  </div>
+
   <details class="quiz">
     <summary>Check yourself: A bird and a bat both have wings. Are wings a homologous or analogous structure between them?</summary>
     <div class="answer">ANALOGOUS — same function (flight), but different underlying anatomy. Birds evolved wings from feathered forelimbs; bats evolved wings from skin stretched between elongated fingers. They evolved independently. (However, if you compare a bat's wing bones to a human's arm bones — same bones, different function — those ARE homologous.)</div>
@@ -853,7 +858,150 @@ Phenotype ratio: 3 purple : 1 white</pre>
     <summary>Check yourself: A volcanic island is colonized by 10 birds blown off course in a storm. The new population has very different allele frequencies than the original. Which effect is this?</summary>
     <div class="answer">FOUNDER effect — a small group started a new population, so its allele frequencies (by chance, not by selection) became the baseline for the new population.</div>
   </details>
-</section>
+<div style="margin: 1.2rem 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f6f3f; }
+    .ct { font-size: 14px; font-weight: 700; fill: #2a4d7a; }
+    .label { font-size: 11px; fill: #1c1c1c; }
+    .ax { stroke: #444; stroke-width: 1.5; }
+    .before { fill: none; stroke: #888; stroke-width: 2; stroke-dasharray: 4,3; }
+    .after { fill: none; stroke: #c44a3f; stroke-width: 2.5; }
+    .legend-box { fill: #fdfbf3; stroke: #aaa; }
+    .note { font-size: 11px; fill: #b1530a; font-style: italic; }
+  </style>
+  <text x="380" y="26" text-anchor="middle" class="title">Three Types of Natural Selection on Polygenic Traits</text>
+  <text x="380" y="45" text-anchor="middle" class="label">Dashed = original population · Red = after selection</text>
+
+  <!-- DIRECTIONAL -->
+  <g transform="translate(20, 70)">
+    <text x="120" y="0" text-anchor="middle" class="ct">Directional</text>
+    <text x="120" y="18" text-anchor="middle" class="label">One extreme favored → curve SHIFTS</text>
+    <!-- axes -->
+    <line x1="20" y1="200" x2="220" y2="200" class="ax"/>
+    <line x1="20" y1="200" x2="20" y2="50" class="ax"/>
+    <text x="120" y="225" text-anchor="middle" class="label">trait value →</text>
+    <!-- before curve, centered at x=120 -->
+    <path d="M 30,200 Q 70,200 90,160 Q 110,80 130,80 Q 150,80 170,160 Q 195,200 215,200" class="before"/>
+    <!-- after curve, shifted right -->
+    <path d="M 50,200 Q 90,200 110,160 Q 130,80 150,80 Q 170,80 190,160 Q 215,200 215,200" class="after"/>
+    <!-- arrow -->
+    <line x1="105" y1="120" x2="160" y2="120" stroke="#1f6f3f" stroke-width="2" marker-end="url(#arr)"/>
+    <text x="200" y="80" text-anchor="middle" class="note">Ex: antibiotic-resistant bacteria,</text>
+    <text x="200" y="94" text-anchor="middle" class="note">peppered moths in soot era</text>
+  </g>
+
+  <!-- STABILIZING -->
+  <g transform="translate(270, 70)">
+    <text x="120" y="0" text-anchor="middle" class="ct">Stabilizing</text>
+    <text x="120" y="18" text-anchor="middle" class="label">Middle favored → curve NARROWS</text>
+    <line x1="20" y1="200" x2="220" y2="200" class="ax"/>
+    <line x1="20" y1="200" x2="20" y2="50" class="ax"/>
+    <text x="120" y="225" text-anchor="middle" class="label">trait value →</text>
+    <!-- before (wide low curve) -->
+    <path d="M 30,200 Q 60,200 85,140 Q 105,110 125,110 Q 145,110 165,140 Q 190,200 220,200" class="before"/>
+    <!-- after (narrow tall curve, same center) -->
+    <path d="M 60,200 Q 90,200 105,140 Q 120,60 125,60 Q 130,60 145,140 Q 160,200 190,200" class="after"/>
+    <text x="120" y="55" text-anchor="middle" class="note">narrower &amp; taller</text>
+    <text x="120" y="265" text-anchor="middle" class="note">Ex: human birth weight</text>
+  </g>
+
+  <!-- DISRUPTIVE -->
+  <g transform="translate(520, 70)">
+    <text x="120" y="0" text-anchor="middle" class="ct">Disruptive</text>
+    <text x="120" y="18" text-anchor="middle" class="label">Both extremes favored → curve SPLITS</text>
+    <line x1="20" y1="200" x2="220" y2="200" class="ax"/>
+    <line x1="20" y1="200" x2="20" y2="50" class="ax"/>
+    <text x="120" y="225" text-anchor="middle" class="label">trait value →</text>
+    <!-- before (single curve, center) -->
+    <path d="M 30,200 Q 70,200 90,160 Q 110,80 130,80 Q 150,80 170,160 Q 195,200 215,200" class="before"/>
+    <!-- after (two peaks) -->
+    <path d="M 30,200 Q 50,200 60,150 Q 70,90 80,90 Q 90,90 100,150 Q 110,200 125,200 Q 140,200 150,150 Q 160,90 170,90 Q 180,90 190,150 Q 200,200 215,200" class="after"/>
+    <text x="120" y="265" text-anchor="middle" class="note">Ex: beak size in drought —</text>
+    <text x="120" y="280" text-anchor="middle" class="note">only big or tiny beaks fit available seeds</text>
+  </g>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#1f6f3f"/>
+    </marker>
+  </defs>
+
+  <!-- key -->
+  <rect x="280" y="320" width="200" height="30" rx="4" class="legend-box"/>
+  <line x1="295" y1="334" x2="320" y2="334" class="before"/>
+  <text x="324" y="338" class="label">original</text>
+  <line x1="380" y1="334" x2="405" y2="334" class="after"/>
+  <text x="409" y="338" class="label">after selection</text>
+</svg>
+</div><div style="margin: 1.2rem 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 18px; font-weight: 700; fill: #1f6f3f; }
+    .label { font-size: 12px; fill: #1c1c1c; }
+    .small { font-size: 11px; fill: #555; }
+    .branch { stroke: #1f6f3f; stroke-width: 2; fill: none; }
+    .node { fill: #b1530a; }
+    .trait-label { font-size: 10px; fill: #b1530a; font-weight: 600; }
+    .legend-box { fill: #fdfbf3; stroke: #aaa; }
+    .species { font-size: 11px; font-weight: 700; fill: #14492c; }
+  </style>
+  <text x="380" y="26" text-anchor="middle" class="title">How to Read a Cladogram</text>
+  <text x="380" y="45" text-anchor="middle" class="small">Each branch point (node) = a common ancestor. Species closer together share more recent ancestors.</text>
+
+  <!-- Cladogram structure -->
+  <!-- root -->
+  <line x1="50" y1="320" x2="200" y2="320" class="branch"/>
+  <line x1="200" y1="320" x2="240" y2="280" class="branch"/>
+  <line x1="200" y1="320" x2="240" y2="360" class="branch"/>
+  <!-- 1st branch (shark) -->
+  <text x="260" y="365" class="species">Shark</text>
+  <text x="260" y="378" class="small">(no legs, no amniotic egg)</text>
+
+  <!-- 2nd node, splits -->
+  <line x1="240" y1="280" x2="350" y2="280" class="branch"/>
+  <line x1="350" y1="280" x2="380" y2="245" class="branch"/>
+  <line x1="350" y1="280" x2="380" y2="315" class="branch"/>
+  <text x="400" y="320" class="species">Frog</text>
+  <text x="400" y="333" class="small">(legs, no amniotic egg)</text>
+
+  <!-- 3rd node, splits  -->
+  <line x1="380" y1="245" x2="470" y2="245" class="branch"/>
+  <line x1="470" y1="245" x2="500" y2="210" class="branch"/>
+  <line x1="470" y1="245" x2="500" y2="280" class="branch"/>
+  <text x="520" y="285" class="species">Lizard</text>
+  <text x="520" y="298" class="small">(legs, amniotic egg, no fur)</text>
+
+  <!-- 4th node, splits -->
+  <line x1="500" y1="210" x2="580" y2="210" class="branch"/>
+  <line x1="580" y1="210" x2="620" y2="175" class="branch"/>
+  <line x1="580" y1="210" x2="620" y2="245" class="branch"/>
+  <text x="640" y="250" class="species">Mouse</text>
+  <text x="640" y="263" class="small">(fur, milk)</text>
+  <text x="640" y="180" class="species">Human</text>
+  <text x="640" y="193" class="small">(fur, milk, bipedal)</text>
+
+  <!-- node circles -->
+  <circle cx="200" cy="320" r="5" class="node"/>
+  <circle cx="350" cy="280" r="5" class="node"/>
+  <circle cx="470" cy="245" r="5" class="node"/>
+  <circle cx="580" cy="210" r="5" class="node"/>
+
+  <!-- trait labels at branch points -->
+  <text x="270" y="270" class="trait-label">→ legs</text>
+  <text x="400" y="235" class="trait-label">→ amniotic egg</text>
+  <text x="510" y="200" class="trait-label">→ fur/milk</text>
+
+  <!-- HOW TO READ -->
+  <rect x="40" y="340" width="370" height="65" rx="6" class="legend-box"/>
+  <text x="50" y="360" class="label" font-weight="700">How to read it:</text>
+  <text x="50" y="378" class="small">• To find how related two species are, trace down to their</text>
+  <text x="50" y="392" class="small">  MOST RECENT COMMON ANCESTOR (the closest shared node).</text>
+
+  <rect x="430" y="340" width="310" height="65" rx="6" class="legend-box"/>
+  <text x="440" y="360" class="label" font-weight="700">Example:</text>
+  <text x="440" y="378" class="small">Lizard + Human share a more recent ancestor (3rd node)</text>
+  <text x="440" y="392" class="small">than Lizard + Frog → Lizard is MORE related to Human.</text>
+</svg>
+</div></section>
 
 <!-- ============================================== -->
 <!-- TOPIC VI: ECOLOGY -->
@@ -1105,6 +1253,18 @@ Phenotype ratio: 3 purple : 1 white</pre>
   <h4>Big rule for which side is which:</h4>
   <p><strong>RIGHT side = Returns from body (DEOXYGENATED). LEFT side = Leaves toward body (OXYGENATED).</strong></p>
 
+  <div class="callout warn">
+    <span class="label">Watch out — labeling</span><br>
+    Your teacher's heart diagram in class is marked <strong>"KNOW FOR FINAL"</strong> and labels these 13 parts. Be able to identify each on a diagram:
+    <ul>
+      <li>Superior vena cava · Inferior vena cava · Aorta · <strong>Aortic arch</strong></li>
+      <li><strong>Pulmonary trunk</strong> · <strong>Right pulmonary artery</strong> · <strong>Left pulmonary artery</strong></li>
+      <li><strong>Right pulmonary veins</strong> · <strong>Left pulmonary veins</strong></li>
+      <li>Right atrium · Right ventricle · Left atrium · Left ventricle</li>
+    </ul>
+    Don't just write "pulmonary artery" — know LEFT vs RIGHT.
+  </div>
+
   <h4>Blood flow (memorize this loop!)</h4>
   <p><strong>Right atrium → tricuspid valve → right ventricle → pulmonary semilunar valve → pulmonary artery → LUNGS (gas exchange) → pulmonary veins → left atrium → bicuspid (mitral) valve → left ventricle → aortic semilunar valve → aorta → BODY → vena cavae → right atrium.</strong></p>
 
@@ -1196,12 +1356,12 @@ Phenotype ratio: 3 purple : 1 white</pre>
     <div class="answer">The diaphragm CONTRACTS and flattens DOWNWARD. This expands the chest cavity → the air pressure inside the lungs drops below atmospheric pressure → air rushes IN through the nose to equalize the pressure.</div>
   </details>
 
-<div style="margin: 1.2rem 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system, Helvetica, Arial, sans-serif">
+<div style="margin: 1.2rem 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="-apple-system, Helvetica, Arial, sans-serif">
   <style>
     .title { font-size: 18px; font-weight: 700; fill: #1f6f3f; }
-    .label { font-size: 12px; fill: #1c1c1c; }
-    .chamber { font-size: 13px; font-weight: 700; }
-    .vessel { font-size: 11px; }
+    .label { font-size: 11.5px; fill: #1c1c1c; }
+    .chamber { font-size: 12.5px; font-weight: 700; }
+    .vessel { font-size: 10.5px; font-weight: 600; }
     .deox { fill: #5680b3; }
     .ox { fill: #c44a3f; }
     .deox-stroke { stroke: #5680b3; stroke-width: 2; fill: none; }
@@ -1210,75 +1370,92 @@ Phenotype ratio: 3 purple : 1 white</pre>
     .deox-fill { fill: #cfdbef; }
     .ox-fill { fill: #fbd9d4; }
     .legend-box { stroke: #888; fill: #fdfbf3; }
+    .knowforfinal { fill: #fff9e6; stroke: #d4a300; stroke-width: 1.5; }
   </style>
-  <text x="360" y="26" text-anchor="middle" class="title">Heart Anatomy &amp; Blood Flow</text>
-  <text x="360" y="46" text-anchor="middle" class="label">RIGHT side = deoxygenated (to lungs) · LEFT side = oxygenated (to body)</text>
+  <text x="380" y="24" text-anchor="middle" class="title">Heart Anatomy &amp; Blood Flow</text>
+  <text x="380" y="42" text-anchor="middle" class="label">RIGHT side = deoxygenated (to lungs) · LEFT side = oxygenated (to body)</text>
 
-  <!-- HEART -->
+  <!-- KNOW FOR FINAL banner -->
+  <rect x="260" y="50" width="240" height="20" rx="4" class="knowforfinal"/>
+  <text x="380" y="65" text-anchor="middle" class="vessel" fill="#8a6800">⚠ Teacher: "KNOW FOR FINAL" — all labels below</text>
+
+  <!-- AORTIC ARCH (top curve) -->
+  <path d="M 380,135 Q 380,90 460,90 Q 540,90 540,135" class="ox-stroke" stroke-width="3" fill="none"/>
+  <text x="460" y="80" text-anchor="middle" class="vessel ox">Aortic arch</text>
+
+  <!-- Pulmonary trunk -->
+  <line x1="350" y1="160" x2="350" y2="120" class="deox-stroke" stroke-width="3"/>
+  <text x="290" y="115" text-anchor="end" class="vessel deox">Pulmonary trunk</text>
+  <line x1="294" y1="115" x2="335" y2="120" stroke="#5680b3" stroke-width="1"/>
+
+  <!-- Left pulmonary artery -->
+  <line x1="350" y1="120" x2="420" y2="105" class="deox-stroke" stroke-width="2.5"/>
+  <text x="450" y="105" class="vessel deox">Left pulmonary artery</text>
+
+  <!-- Right pulmonary artery -->
+  <line x1="350" y1="120" x2="280" y2="105" class="deox-stroke" stroke-width="2.5"/>
+  <text x="270" y="105" text-anchor="end" class="vessel deox">Right pulmonary artery</text>
+
+  <!-- HEART chambers -->
   <!-- right side -->
-  <rect x="240" y="110" width="110" height="80" class="chamber-box deox-fill"/>
-  <text x="295" y="148" text-anchor="middle" class="chamber deox">Right Atrium</text>
-  <text x="295" y="166" text-anchor="middle" class="label">deoxygenated</text>
+  <rect x="240" y="160" width="120" height="80" class="chamber-box deox-fill"/>
+  <text x="300" y="195" text-anchor="middle" class="chamber deox">Right Atrium</text>
+  <text x="300" y="215" text-anchor="middle" class="label">deoxygenated</text>
 
-  <rect x="240" y="200" width="110" height="120" class="chamber-box deox-fill"/>
-  <text x="295" y="250" text-anchor="middle" class="chamber deox">Right Ventricle</text>
-  <text x="295" y="268" text-anchor="middle" class="label">deoxygenated</text>
-  <text x="295" y="288" text-anchor="middle" class="label">(thinner wall)</text>
+  <rect x="240" y="250" width="120" height="130" class="chamber-box deox-fill"/>
+  <text x="300" y="305" text-anchor="middle" class="chamber deox">Right Ventricle</text>
+  <text x="300" y="325" text-anchor="middle" class="label">deoxygenated</text>
+  <text x="300" y="345" text-anchor="middle" class="label">(thinner wall)</text>
 
   <!-- left side -->
-  <rect x="370" y="110" width="110" height="80" class="chamber-box ox-fill"/>
-  <text x="425" y="148" text-anchor="middle" class="chamber ox">Left Atrium</text>
-  <text x="425" y="166" text-anchor="middle" class="label">oxygenated</text>
+  <rect x="380" y="160" width="120" height="80" class="chamber-box ox-fill"/>
+  <text x="440" y="195" text-anchor="middle" class="chamber ox">Left Atrium</text>
+  <text x="440" y="215" text-anchor="middle" class="label">oxygenated</text>
 
-  <rect x="370" y="200" width="110" height="120" class="chamber-box ox-fill"/>
-  <text x="425" y="245" text-anchor="middle" class="chamber ox">Left Ventricle</text>
-  <text x="425" y="263" text-anchor="middle" class="label">oxygenated</text>
-  <text x="425" y="283" text-anchor="middle" class="label">THICKEST wall</text>
-  <text x="425" y="303" text-anchor="middle" class="label">(pumps to body)</text>
+  <rect x="380" y="250" width="120" height="130" class="chamber-box ox-fill"/>
+  <text x="440" y="300" text-anchor="middle" class="chamber ox">Left Ventricle</text>
+  <text x="440" y="320" text-anchor="middle" class="label">oxygenated</text>
+  <text x="440" y="340" text-anchor="middle" class="label">THICKEST wall</text>
+  <text x="440" y="358" text-anchor="middle" class="label">(pumps to body)</text>
 
   <!-- valves between atria and ventricles -->
-  <line x1="245" y1="195" x2="345" y2="195" stroke="#444" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="295" y="207" text-anchor="middle" class="vessel" fill="#666">tricuspid valve</text>
-  <line x1="375" y1="195" x2="475" y2="195" stroke="#444" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="425" y="207" text-anchor="middle" class="vessel" fill="#666">bicuspid valve</text>
+  <line x1="245" y1="245" x2="355" y2="245" stroke="#444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="300" y="258" text-anchor="middle" class="vessel" fill="#666">tricuspid valve</text>
+  <line x1="385" y1="245" x2="495" y2="245" stroke="#444" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="440" y="258" text-anchor="middle" class="vessel" fill="#666">bicuspid valve</text>
 
   <!-- septum -->
-  <line x1="360" y1="110" x2="360" y2="320" stroke="#222" stroke-width="3"/>
-  <text x="360" y="335" text-anchor="middle" class="vessel" fill="#444">septum</text>
+  <line x1="370" y1="160" x2="370" y2="380" stroke="#222" stroke-width="3"/>
+  <text x="370" y="395" text-anchor="middle" class="vessel" fill="#444">septum</text>
 
   <!-- vena cavae INTO right atrium -->
-  <path d="M 80,130 Q 160,130 240,140" class="deox-stroke"/>
-  <text x="80" y="120" class="vessel deox">Superior vena cava</text>
-  <text x="80" y="135" class="vessel deox">(from upper body)</text>
-  <path d="M 80,180 Q 160,180 240,170" class="deox-stroke"/>
-  <text x="80" y="195" class="vessel deox">Inferior vena cava</text>
-  <text x="80" y="210" class="vessel deox">(from lower body)</text>
+  <path d="M 80,180 Q 160,180 240,190" class="deox-stroke"/>
+  <text x="78" y="170" text-anchor="start" class="vessel deox">Superior vena cava</text>
+  <text x="78" y="183" text-anchor="start" class="label deox">(from upper body)</text>
+  <path d="M 80,230 Q 160,230 240,220" class="deox-stroke"/>
+  <text x="78" y="245" text-anchor="start" class="vessel deox">Inferior vena cava</text>
+  <text x="78" y="258" text-anchor="start" class="label deox">(from lower body)</text>
 
-  <!-- pulmonary artery OUT of right ventricle -->
-  <path d="M 295,200 Q 295,80 360,75" class="deox-stroke" stroke-dasharray="0" stroke-width="2.5"/>
-  <polygon points="357,72 367,75 357,78" class="deox"/>
-  <text x="200" y="65" class="vessel deox">Pulmonary artery → LUNGS</text>
-  <text x="200" y="80" class="vessel deox" font-style="italic">(only artery with deoxygenated blood!)</text>
+  <!-- Right pulmonary veins INTO left atrium -->
+  <path d="M 560,200 Q 600,210 500,200" class="ox-stroke"/>
+  <text x="565" y="195" class="vessel ox">Right pulmonary veins</text>
 
-  <!-- pulmonary veins INTO left atrium -->
-  <path d="M 540,75 Q 425,80 425,110" class="ox-stroke"/>
-  <text x="500" y="100" class="vessel ox">← Pulmonary veins</text>
-  <text x="500" y="115" class="vessel ox" font-style="italic">(only veins with</text>
-  <text x="500" y="130" class="vessel ox" font-style="italic">oxygenated blood!)</text>
+  <!-- Left pulmonary veins (back side) -->
+  <path d="M 560,230 Q 600,240 500,225" class="ox-stroke"/>
+  <text x="565" y="225" class="vessel ox">Left pulmonary veins</text>
 
   <!-- aorta OUT of left ventricle -->
-  <path d="M 425,200 Q 425,90 540,90" fill="none" stroke="none"/>
-  <path d="M 480,260 Q 600,200 600,130" class="ox-stroke" stroke-width="3"/>
-  <polygon points="597,127 603,135 605,127" class="ox"/>
-  <text x="555" y="280" class="vessel ox">Aorta → BODY</text>
-  <text x="555" y="295" class="vessel ox">(largest artery)</text>
+  <path d="M 540,135 Q 600,200 600,300" class="ox-stroke" stroke-width="3"/>
+  <polygon points="597,297 603,310 605,297" class="ox"/>
+  <text x="610" y="300" class="vessel ox">Aorta</text>
+  <text x="610" y="315" class="label ox">(largest artery → BODY)</text>
 
   <!-- flow order steps -->
-  <rect x="40" y="360" width="640" height="80" rx="8" class="legend-box"/>
-  <text x="55" y="380" class="label" font-weight="700">Blood flow loop (memorize!):</text>
-  <text x="55" y="402" class="label">Right atrium → tricuspid → Right ventricle → pulm. artery → <tspan class="deox" font-weight="700">LUNGS</tspan> (drops CO₂, picks up O₂)</text>
-  <text x="55" y="420" class="label">→ pulm. veins → Left atrium → bicuspid → Left ventricle → aorta → <tspan class="ox" font-weight="700">BODY</tspan> (drops O₂, picks up CO₂)</text>
-  <text x="55" y="436" class="label">→ vena cavae → back to right atrium. ▶ loop complete</text>
+  <rect x="40" y="420" width="680" height="90" rx="8" class="legend-box"/>
+  <text x="55" y="440" class="label" font-weight="700">Blood flow loop (memorize!):</text>
+  <text x="55" y="460" class="label">R atrium → tricuspid → R ventricle → pulm. semilunar valve → pulm. trunk → pulm. arteries → <tspan class="deox" font-weight="700">LUNGS</tspan> (drops CO₂, picks up O₂)</text>
+  <text x="55" y="478" class="label">→ pulm. veins → L atrium → bicuspid → L ventricle → aortic SL valve → aorta → <tspan class="ox" font-weight="700">BODY</tspan> (drops O₂, picks up CO₂)</text>
+  <text x="55" y="496" class="label">→ vena cavae → back to right atrium. ▶ loop complete</text>
 </svg>
 <div style="margin: 1.2rem 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="-apple-system, Helvetica, Arial, sans-serif">
   <style>

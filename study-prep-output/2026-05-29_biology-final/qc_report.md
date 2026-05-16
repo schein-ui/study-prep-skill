@@ -65,9 +65,15 @@ All 28 files in the parent's Drive folder were inventoried. **Every meaningful f
 |---|---|
 | Level 1: Summary only | ✅ Skipped — we had the actual files |
 | **Level 2: Text extraction from primary PDFs** | ✅ **Done for all 27 content files via Google Drive `read_file_content` MCP** |
-| Level 3: Image rendering of PDFs | ⚠ NOT done — text extraction was sufficient for the kind of content in these files (slides + worksheets are mostly text with diagrams the student already learned in class). Two consequences: |
-|  | • Pure-image diagrams in slides (e.g., the specific cladogram on slide 33 of Evolution of Populations, the karyotype layout, the labeled heart cross-section) were NOT visually inspected. The study guide describes them in words but a side-by-side check wasn't possible. |
-|  | • For a re-run, image rendering would be the next escalation. |
+| **Level 3: Image rendering of PDFs** | ✅ **Done for 4 highest-priority slide decks** (Circulatory & Respiratory, Meiosis & Reproduction, Genetics, Evolution of Populations). Image-only slides were rendered via PyMuPDF and visually inspected. Findings incorporated: |
+|  | • Heart anatomy SVG was UPDATED to include the full set of labels the teacher marks "KNOW FOR FINAL" — aortic arch, pulmonary trunk, right vs left pulmonary arteries, right vs left pulmonary veins. |
+|  | • New Watch-Out callout in the study guide listing all 13 heart-anatomy labels Chloe needs to identify on a diagram. |
+|  | • New visual: 3 side-by-side selection curve diagrams (directional / stabilizing / disruptive). Previously only described in words. |
+|  | • New visual: cladogram with worked example for how to read it. |
+|  | • New quiz problem (Q29B) — the EXACT pedigree problem from the teacher's slide ("attached earlobes autosomal recessive — what is the genotype of individual II-3?") with worked answer. |
+|  | • New glossary entries: epididymis, seminiferous tubules, seminal vesicle, aortic arch, pulmonary trunk, amniotic sac, amniotic fluid (all explicitly labeled on the teacher's slides). |
+|  | • Confirmed: the blood-flow loop diagram on the teacher's slide ("KNOW FOR FINAL") matches my study guide's loop exactly. |
+|  | • The other 4 slide decks (Evolution 25-26, Ecology, RNA, X-Linked) had text-extraction sufficient — visuals there were mostly stock textbook images already covered by my SVGs and content. |
 | Level 4: Student-work audit | ❌ **NOT done — Chloe's filled-in homework was not provided.** See below. |
 
 ---
@@ -139,7 +145,7 @@ This is honored in the bundle:
 ## Known limitations / honest disclosure
 
 1. **No student-work audit** (see above) — biggest gap.
-2. **No image rendering of slide PDFs.** Slide diagrams (specific figures the teacher used in class) were not visually inspected. The bundle covers what the *text* of those slides said; if a test question hangs on a SPECIFIC visual on a particular slide (e.g., "what does the labeled diagram on slide 14 show?") this guide cannot guarantee coverage.
+2. **Image rendering of slide PDFs:** Done for the 4 highest-priority decks (Circulatory, Meiosis, Genetics, Evolution Pop). The remaining 4 decks (Evolution 25-26, Ecology, RNA, X-Linked) were not rendered — their visual content is mostly standard textbook figures already covered by my SVGs and content. If a test question hangs on a specific visual from one of those 4 unrendered decks, this guide may not flag it explicitly.
 3. **No multi-expert agentloop review.** The bundle was produced by a single pass without the multi-expert grading loop. The grading scorecard (next file) reflects only an honest self-assessment, not multiple-expert sign-off.
 4. **Polar bodies wording in oogenesis.** Most 9th-grade textbooks describe oogenesis as producing 1 ovum + 3 polar bodies (one in Meiosis I → polar body + secondary oocyte, then secondary oocyte → 1 ovum + 1 polar body in Meiosis II = 1 ovum + 2 polar bodies, OR + 3 if the first polar body also divides). The bundle uses the common simplified "1 egg + 3 polar bodies" framing matching the Meiosis & Reproduction slides Chloe was taught.
 

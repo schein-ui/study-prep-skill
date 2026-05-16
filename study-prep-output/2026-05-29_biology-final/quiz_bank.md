@@ -117,6 +117,10 @@ A. Line graph B. Bar graph C. Pie chart D. Scatter plot
 
 **29.** A pedigree shows a trait that appears in every generation, in both males and females, and an affected parent always has at least one affected child. Is the trait dominant or recessive? Autosomal or sex-linked?
 
+**29B.** (From your teacher's slide.) The pedigree below tracks attached earlobes — an **autosomal recessive trait**. Generation I has father (square, unshaded) and mother (circle, SHADED = has attached earlobes). They have several children in Generation II. Individual II-3 is an **unshaded square** (male, does NOT have attached earlobes). **What is the genotype of II-3?**
+
+Hint: think about what BOTH parents must contribute genetically. Let A = unattached (dominant), a = attached (recessive).
+
 **30.** Use a Punnett square to show how a person with blood type A (genotype Iᴬi) and a person with blood type B (genotype Iᴮi) could have a child with any of the 4 blood types. Show your work.
 
 ### Answers — Topic IV
@@ -131,6 +135,7 @@ A. Line graph B. Bar graph C. Pie chart D. Scatter plot
 27. Punnett: Xᴮxᵇ × XᴮY. Children: XᴮXᴮ (girl, normal), Xᴮxᵇ (girl, carrier), XᴮY (boy, normal), xᵇY (boy, color-blind). **Probability of color-blind son = 1 in 4 (25%).** (Or, if you only count sons: 1 in 2 of the sons are color-blind.)
 28. A karyotype shows all chromosomes lined up by size and pair. Yes — biological sex: **XX = female, XY = male** (look at pair 23).
 29. **Autosomal dominant.** Appears every generation, affects both sexes equally, and affected children come from affected parents.
+29B. **Aa (heterozygous carrier).** Reasoning: Mom is shaded → she has attached earlobes → her genotype is **aa**. Every child must inherit one `a` from her. II-3 is unshaded (unattached earlobes) → he must have at least one `A` allele. Combine: one A from dad + one a from mom = **Aa**. He's a carrier but does not show the trait.
 30. Iᴬi × Iᴮi → Iᴬ Iᴮ (AB), Iᴬi (A), Iᴮi (B), ii (O). **Children can be any of the four blood types — all are possible**, each with 25% probability. (This is a great demo of codominance + recessive in one cross.)
 
 ---

@@ -58,6 +58,8 @@ mappings = [
     ("topic-2", "01_central_dogma"),       # Central Dogma → RNA section
     ("topic-3", "04_meiosis_phases"),      # Meiosis phases → Meiosis section
     ("topic-4", "06_punnett_squares"),     # Punnett squares → Genetics section
+    ("topic-5", "07_selection_curves"),    # Selection curves → Evolution section
+    ("topic-5", "08_cladogram"),           # Cladogram → Evolution section
     ("topic-6", "05_energy_pyramid"),      # Energy pyramid → Ecology section
     ("topic-7", "02_heart_blood_flow"),    # Heart → Human Body section (intentionally first)
 ]

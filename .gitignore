@@ -1,0 +1,3 @@
+study-prep-state/*/source_materials/
+*.pyc
+__pycache__/
